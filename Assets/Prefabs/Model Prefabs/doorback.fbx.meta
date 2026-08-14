@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 29a7cb7d2f1a0ae44af09d507244590d
+guid: 1ead114fd99c45f479c4fd5b60a8991e
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door_MAT
-    second: {fileID: 2100000, guid: 89379f37fedb2fd4b82adf6e72eb7199, type: 2}
+    second: {fileID: 2100000, guid: 9026ab1a485371c4c86480670e5fd552, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gold_MAT
-    second: {fileID: 2100000, guid: e4dc5430413e03743bbaac3731dba199, type: 2}
+    second: {fileID: 2100000, guid: 7c5e8a5ea8a8cd2408a666b955c5f82f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
