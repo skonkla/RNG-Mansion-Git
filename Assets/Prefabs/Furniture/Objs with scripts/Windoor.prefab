@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WindoorPicker
   door: {fileID: 2502514215570849588}
   window: {fileID: 6179920925294335161}
-  x: 2
+  x: 3
 --- !u!1001 &1818255068160755623
 PrefabInstance:
   m_ObjectHideFlags: 0

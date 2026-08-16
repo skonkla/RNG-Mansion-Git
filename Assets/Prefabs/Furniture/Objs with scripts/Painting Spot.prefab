@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PaintingPicker
   painting1: {fileID: 1783290779712166630}
   painting2: {fileID: 2165590271368662930}
-  x: 2
+  x: 3
 --- !u!1 &1783290779712166630
 GameObject:
   m_ObjectHideFlags: 0

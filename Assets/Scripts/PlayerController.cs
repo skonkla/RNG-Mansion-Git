@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
         RandomizeArray(medRooms);
         RandomizeArray(hardRooms);
         RandomizeArray(checkpointRooms);
+
+        //Debug.Log(easyRooms[0] + " " + easyRooms[1] + " " + easyRooms[2]);
         
         i = 0;
     }
@@ -114,7 +116,7 @@ public class PlayerController : MonoBehaviour
         monster.SetActive(false);
         player.transform.position = spawnVector;
         monster.transform.position = spawnVector;
-        //player.transform.localRotation = Quaternion.Euler(1,1,1);
+        //player.transform.localRotation = Quaternion.Euler(1,1);
 
         roomManager.AddTime(easyTime);
         roomManager.isPaused = false;
@@ -208,7 +210,6 @@ public class PlayerController : MonoBehaviour
             int i = Random.Range(0, count--);
             (array[i], array[count]) = (array[count], array[i]);
         }
-
     return array;
 
     }

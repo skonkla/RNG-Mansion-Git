@@ -10,7 +10,7 @@ public class WindoorPicker : MonoBehaviour
     {
         door.SetActive(false);
         window.SetActive(false);
-        x = Random.Range(1, x + 2);
+        x = Random.Range(1, x + 1);
 
         if (x == 1)
         {

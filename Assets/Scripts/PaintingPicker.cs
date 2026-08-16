@@ -10,7 +10,7 @@ public class PaintingPicker : MonoBehaviour
     {
         painting1.SetActive(false);
         painting2.SetActive(false);
-        x = Random.Range(1, x + 2);
+        x = Random.Range(1, x + 1);
 
         if (x == 1)
         {
