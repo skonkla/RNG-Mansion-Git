@@ -118,8 +118,8 @@ Transform:
   m_GameObject: {fileID: 175105677176029570}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 2.035892, y: 0.27163124, z: -3.1484153}
-  m_LocalScale: {x: 0.51084226, y: 0.51084226, z: 0.51084226}
+  m_LocalPosition: {x: 0.000013828278, y: 0, z: -1.404}
+  m_LocalScale: {x: 0.120698504, y: 0.120698504, z: 0.120698504}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 392787872237059989}
@@ -130,7 +130,7 @@ Transform:
   - {fileID: 3711283914218031423}
   - {fileID: 232847049194559461}
   - {fileID: 2213469169868493722}
-  m_Father: {fileID: 6901425896093629608}
+  m_Father: {fileID: 1255372840155669214}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &7162203900983781439
 BoxCollider:
@@ -186,7 +186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd6e9d0887d2fc4fa04665cb3e89f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chairs
-  chair: {fileID: 175105677176029570}
   x: 2
 --- !u!1 &316876392355669089
 GameObject:
@@ -1393,12 +1392,6 @@ Transform:
   - {fileID: 5405210779302852643}
   - {fileID: 2157188675043609847}
   - {fileID: 3618986982072400410}
-  - {fileID: 8902727126900356006}
-  - {fileID: 364378978375729784}
-  - {fileID: 2399940850795795435}
-  - {fileID: 7373311541545156546}
-  - {fileID: 5054878209864285161}
-  - {fileID: 6669978651841343375}
   m_Father: {fileID: 1255372840155669214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &511502583999170494
@@ -1810,8 +1803,8 @@ Transform:
   m_GameObject: {fileID: 1712437506567583896}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -1.7436284, y: 0.27163124, z: -3.1459825}
-  m_LocalScale: {x: 0.51084226, y: 0.51084226, z: 0.51084226}
+  m_LocalPosition: {x: -0.8929868, y: 0, z: -1.4034252}
+  m_LocalScale: {x: 0.120698504, y: 0.120698504, z: 0.120698504}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5668881029193606809}
@@ -1822,7 +1815,7 @@ Transform:
   - {fileID: 8621512962226834309}
   - {fileID: 3030445920692187666}
   - {fileID: 4683174752353840828}
-  m_Father: {fileID: 6901425896093629608}
+  m_Father: {fileID: 1255372840155669214}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &4070801587369433878
 BoxCollider:
@@ -1878,7 +1871,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd6e9d0887d2fc4fa04665cb3e89f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chairs
-  chair: {fileID: 1712437506567583896}
   x: 2
 --- !u!1 &2013682532298069893
 GameObject:
@@ -2088,8 +2080,8 @@ Transform:
   m_GameObject: {fileID: 2335128655144244934}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.698003, y: 0.27163124, z: -0.09237914}
-  m_LocalScale: {x: 0.51084226, y: 0.51084226, z: 0.51084226}
+  m_LocalPosition: {x: 0.6290002, y: 0, z: -0.6819396}
+  m_LocalScale: {x: 0.120698504, y: 0.120698504, z: 0.120698504}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8187888458002921853}
@@ -2100,7 +2092,7 @@ Transform:
   - {fileID: 8100501835948000254}
   - {fileID: 8754542103814295263}
   - {fileID: 1160760996814749714}
-  m_Father: {fileID: 6901425896093629608}
+  m_Father: {fileID: 1255372840155669214}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &7309607656498628705
 BoxCollider:
@@ -2156,7 +2148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd6e9d0887d2fc4fa04665cb3e89f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chairs
-  chair: {fileID: 2335128655144244934}
   x: 2
 --- !u!1 &2491971459460077389
 GameObject:
@@ -3176,8 +3167,8 @@ Transform:
   m_GameObject: {fileID: 4764054229506940982}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0358334, y: 0.27163124, z: 2.7938502}
-  m_LocalScale: {x: 0.51084226, y: 0.51084226, z: 0.51084226}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.120698504, y: 0.120698504, z: 0.120698504}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 292750554472407484}
@@ -3188,7 +3179,7 @@ Transform:
   - {fileID: 3915689953090798117}
   - {fileID: 2882671157033326596}
   - {fileID: 4290646077012684308}
-  m_Father: {fileID: 6901425896093629608}
+  m_Father: {fileID: 1255372840155669214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &167835119944720779
 BoxCollider:
@@ -3244,7 +3235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd6e9d0887d2fc4fa04665cb3e89f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chairs
-  chair: {fileID: 4764054229506940982}
   x: 2
 --- !u!1 &5317732799875874093
 GameObject:
@@ -3274,8 +3264,8 @@ Transform:
   m_GameObject: {fileID: 5317732799875874093}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7436839, y: 0.27163124, z: 2.7938502}
-  m_LocalScale: {x: 0.51084226, y: 0.51084226, z: 0.51084226}
+  m_LocalPosition: {x: -0.8929999, y: 0, z: 0}
+  m_LocalScale: {x: 0.120698504, y: 0.120698504, z: 0.120698504}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6204492374059053478}
@@ -3286,7 +3276,7 @@ Transform:
   - {fileID: 2899816812122899026}
   - {fileID: 4079185924146579995}
   - {fileID: 1022958850894331122}
-  m_Father: {fileID: 6901425896093629608}
+  m_Father: {fileID: 1255372840155669214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1245780885184381452
 BoxCollider:
@@ -3342,7 +3332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd6e9d0887d2fc4fa04665cb3e89f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chairs
-  chair: {fileID: 5317732799875874093}
   x: 2
 --- !u!1 &5422108246047751470
 GameObject:
@@ -3825,6 +3814,12 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6901425896093629608}
+  - {fileID: 8902727126900356006}
+  - {fileID: 364378978375729784}
+  - {fileID: 2399940850795795435}
+  - {fileID: 7373311541545156546}
+  - {fileID: 5054878209864285161}
+  - {fileID: 6669978651841343375}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2343055349993654062
@@ -5399,8 +5394,8 @@ Transform:
   m_GameObject: {fileID: 9111230871705229321}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -4.3339033, y: 0.27163124, z: -0.07570512}
-  m_LocalScale: {x: 0.51084226, y: 0.51084226, z: 0.51084226}
+  m_LocalPosition: {x: -1.5050001, y: 0, z: -0.678}
+  m_LocalScale: {x: 0.120698504, y: 0.120698504, z: 0.120698504}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8516437763813007974}
@@ -5411,7 +5406,7 @@ Transform:
   - {fileID: 8575686545231780958}
   - {fileID: 2320708583381512412}
   - {fileID: 6060416251242499941}
-  m_Father: {fileID: 6901425896093629608}
+  m_Father: {fileID: 1255372840155669214}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!65 &7373717828753598943
 BoxCollider:
@@ -5467,5 +5462,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd6e9d0887d2fc4fa04665cb3e89f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chairs
-  chair: {fileID: 9111230871705229321}
   x: 2

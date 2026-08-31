@@ -150,6 +150,7 @@ public class PlayerController : MonoBehaviour
         }
         m += 1;
 
+        foodNeeded = 3;
         unlocked = false;
 
         numOfRooms += 1;
