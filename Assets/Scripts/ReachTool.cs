@@ -4,7 +4,7 @@ using TMPro;
 public class ReachTool : MonoBehaviour
 {
     public bool inReach = false;
-    public PlayerController playerController;
+    public RoomManager roomManager;
     public TextMeshProUGUI lockedText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,7 +15,7 @@ public class ReachTool : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Door" && playerController.unlocked == false)
+        if (other.gameObject.tag == "Door" && roomManager.unlocked == false)
         {
            lockedText.gameObject.SetActive(true); 
         }

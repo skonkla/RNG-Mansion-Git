@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class MedRoomFoodSpawner : MonoBehaviour
 {
-    public PlayerController playerController;
+    public RoomManager roomManager;
     GameObject currRoom;
     Transform spawn1Trans;
     Transform spawn2Trans;
     Transform spawn3Trans;
     Transform spawn4Trans;
     Transform spawn5Trans;
-    public RoomManager roomManager;
+    public TimerManager timerManager;
     int i;
     Vector3[] spawnPoints = new Vector3[5];
     int s;
@@ -18,10 +18,10 @@ public class MedRoomFoodSpawner : MonoBehaviour
     void Start()
     {
 
-        for (i = 0; i < playerController.medRooms.Length; ++i)
+        for (i = 0; i < roomManager.medRooms.Length; ++i)
         {
 
-            currRoom = playerController.medRooms[i];
+            currRoom = roomManager.medRooms[i];
 
             spawn1Trans = currRoom.transform.GetChild(1);
             spawnPoints[0] = spawn1Trans.transform.position;
@@ -38,21 +38,21 @@ public class MedRoomFoodSpawner : MonoBehaviour
             spawn5Trans = currRoom.transform.GetChild(5);
             spawnPoints[4] = spawn5Trans.transform.position;
 
-            PlayerController.RandomizeVectArray(spawnPoints);
+            RoomManager.RandomizeVectArray(spawnPoints);
 
             //Debug.Log("Spawning food at room #" + i);
 
-            s = Random.Range(0, roomManager.foodies.Length);
+            s = Random.Range(0, timerManager.foodies.Length);
 
-            Instantiate(roomManager.foodies[s], spawnPoints[0], roomManager.foodies[s].transform.rotation);
+            Instantiate(timerManager.foodies[s], spawnPoints[0], timerManager.foodies[s].transform.rotation);
             
-            s = Random.Range(0, roomManager.foodies.Length);
+            s = Random.Range(0, timerManager.foodies.Length);
 
-            Instantiate(roomManager.foodies[s], spawnPoints[1], roomManager.foodies[s].transform.rotation);
+            Instantiate(timerManager.foodies[s], spawnPoints[1], timerManager.foodies[s].transform.rotation);
 
-            s = Random.Range(0, roomManager.foodies.Length);
+            s = Random.Range(0, timerManager.foodies.Length);
 
-            Instantiate(roomManager.foodies[s], spawnPoints[2], roomManager.foodies[s].transform.rotation);
+            Instantiate(timerManager.foodies[s], spawnPoints[2], timerManager.foodies[s].transform.rotation);
             
 
         }
