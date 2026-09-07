@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1999449618181021115}
   - component: {fileID: 4947818799104369380}
   m_Layer: 0
-  m_Name: MilkCarton
+  m_Name: Milk Carton
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

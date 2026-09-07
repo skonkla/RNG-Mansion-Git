@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2939159128977146407}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.707034, z: -0, w: 0.7071796}
+  m_LocalRotation: {x: 0, y: -0.7070326, z: 0, w: 0.7071809}
   m_LocalPosition: {x: 1.2563697, y: 0.587, z: 9.793}
   m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
   m_ConstrainProportionsScale: 1
@@ -50,12 +50,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2519071, y: 11.61667, z: 6.559559}
-  m_Center: {x: -0.12595342, y: 4.007698, z: -0.05081684}
+  m_Size: {x: 1.7357779, y: 11.616669, z: 6.559559}
+  m_Center: {x: -0.36788937, y: 4.007698, z: -0.05081686}
 --- !u!1 &3424134270569450770
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,7 +67,6 @@ GameObject:
   - component: {fileID: 1725876572940583928}
   - component: {fileID: 7930515730013336934}
   - component: {fileID: 1948044204874394041}
-  - component: {fileID: 1029897337541047932}
   - component: {fileID: 8284076082087712892}
   m_Layer: 0
   m_Name: Cube
@@ -148,33 +147,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &1029897337541047932
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3424134270569450770}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!65 &8284076082087712892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -190,12 +162,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.79795474, y: 10.712628, z: 6.368239}
-  m_Center: {x: -0.044505056, y: 4.433974, z: -0.025945073}
+  m_Size: {x: 0.75150216, y: 10.712628, z: 6.368239}
+  m_Center: {x: -0.021279432, y: 4.433974, z: -0.025944987}
 --- !u!1 &6692041118032199526
 GameObject:
   m_ObjectHideFlags: 0

@@ -69,11 +69,9 @@ public class RoomManager : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    public void NewRoom()
     {
         //Debug.Log("Collision Detected");
-        if (collision.gameObject.CompareTag("Door") && unlocked == true)
-        {
             if(numOfRooms < 3) {
                 NewEasyRoom();
                 startingRoom.SetActive(false);
@@ -98,16 +96,8 @@ public class RoomManager : MonoBehaviour
             {
                 Debug.Log("You Win!");
             } 
-        }
     }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Food"))
-        {
-            foodNeeded--;
-            Destroy(other.gameObject);
-        }
-    }
+
     void NewEasyRoom()
     {
         easyRooms[e].SetActive(true);
@@ -116,7 +106,7 @@ public class RoomManager : MonoBehaviour
         monster.SetActive(false);
         player.transform.position = spawnVector;
         monster.transform.position = spawnVector;
-        //player.transform.localRotation = Quaternion.Euler(1,1);
+        player.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
 
         timerManager.AddTime(easyTime);
         timerManager.isPaused = false;
@@ -140,7 +130,7 @@ public class RoomManager : MonoBehaviour
         monster.SetActive(false);
         player.transform.position = spawnVector;
         monster.transform.position = spawnVector;
-        //player.transform.localRotation = Quaternion.Euler(1,1,1);
+        player.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         
         timerManager.AddTime(medTime);
         timerManager.isPaused = false;
@@ -164,7 +154,7 @@ public class RoomManager : MonoBehaviour
         monster.SetActive(false);
         player.transform.position = spawnVector;
         monster.transform.position = spawnVector;
-        //player.transform.localRotation = Quaternion.Euler(1,1,1);
+        player.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         
         timerManager.AddTime(hardTime);
         timerManager.isPaused = false;
@@ -186,7 +176,7 @@ public class RoomManager : MonoBehaviour
         spawnVector = spawnTrans.transform.position;
         monster.SetActive(false);
         player.transform.position = spawnVector;
-        //player.transform.localRotation = Quaternion.Euler(1,1,1);
+        player.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         
         timerManager.AddTime(chkptTime);
         timerManager.isPaused = true;

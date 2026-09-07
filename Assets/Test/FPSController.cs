@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using TMPro;
 
 public class FPSController : MonoBehaviour
 {
@@ -66,6 +67,9 @@ public class FPSController : MonoBehaviour
 
     private float rotationX = 0;
 
+    [Header("Reference Variables")]
+    public RoomManager roomManager;
+
     private void OnEnable()
     {
         OnTakeDamage += ApplyDamage;
@@ -106,6 +110,20 @@ public class FPSController : MonoBehaviour
                 HandleStamina();
 
             ApplyFinalMovements();
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Door") && roomManager.unlocked == true)
+        {
+            roomManager.NewRoom();
+        }
+
+        if (other.gameObject.CompareTag("Food"))
+        {
+            roomManager.foodNeeded--;
+            Destroy(other.gameObject);
         }
     }
 
