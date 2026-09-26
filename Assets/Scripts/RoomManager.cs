@@ -80,15 +80,15 @@ public class RoomManager : MonoBehaviour
                 NewCheckpoint();
                 easyRooms[2].SetActive(false);
             }
-            else if(numOfRooms < 9) {
+            else if(numOfRooms < 7) {
                 NewMedRoom();
                 checkpointRooms[0].SetActive(false);
             }
-            else if(numOfRooms == 9) {
+            else if(numOfRooms == 7) {
                 NewCheckpoint();
                 medRooms[4].SetActive(false);
             }
-            else if(numOfRooms < 17) {
+            else if(numOfRooms < 11) {
                 NewHardRoom();
                 checkpointRooms[1].SetActive(false);
             }
@@ -120,7 +120,7 @@ public class RoomManager : MonoBehaviour
         unlocked = false;
 
         numOfRooms += 1;
-        Debug.Log("Easy Room Spawned. This is room #" + numOfRooms);
+        Debug.Log("Easy Room #" + e +" Spawned. This is room #" + numOfRooms);
     }
     void NewMedRoom()
     {
@@ -144,7 +144,7 @@ public class RoomManager : MonoBehaviour
         unlocked = false;
 
         numOfRooms += 1;
-        Debug.Log("Medium Room Spawned. This is room #" + numOfRooms);
+        Debug.Log("Medium Room #" + m +" Spawned. This is room #" + numOfRooms);
     }
     void NewHardRoom()
     {
@@ -164,10 +164,11 @@ public class RoomManager : MonoBehaviour
         }
         h += 1;
 
+        foodNeeded = 4;
         unlocked = false;
 
         numOfRooms += 1;
-        Debug.Log("Hard Room Spawned. This is room #" + numOfRooms);
+        Debug.Log("Hard Room #" + h +" Spawned. This is room #" + numOfRooms);
     }
     void NewCheckpoint()
     {
@@ -189,7 +190,7 @@ public class RoomManager : MonoBehaviour
         unlocked = true;
 
         numOfRooms += 1;
-        Debug.Log("Checkpoint Room Spawned. This is room #" + numOfRooms);
+        Debug.Log("Checkpoint #" + c +" Spawned. This is room #" + numOfRooms);
     }
 
 

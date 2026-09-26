@@ -69,6 +69,7 @@ public class FPSController : MonoBehaviour
 
     [Header("Reference Variables")]
     public RoomManager roomManager;
+    public static Action<int> OnEat;
 
     private void OnEnable()
     {
@@ -118,12 +119,14 @@ public class FPSController : MonoBehaviour
         if (other.gameObject.CompareTag("Door") && roomManager.unlocked == true)
         {
             roomManager.NewRoom();
+            OnEat?.Invoke(roomManager.foodNeeded);
         }
 
         if (other.gameObject.CompareTag("Food"))
         {
             roomManager.foodNeeded--;
             Destroy(other.gameObject);
+            OnEat?.Invoke(roomManager.foodNeeded);
         }
     }
 
@@ -220,7 +223,13 @@ public class FPSController : MonoBehaviour
 
     private IEnumerator RegenerateStamina()
     {
-        yield return new WaitForSeconds(timeBeforeStaminaRegen);
+        if(currentStamina == 0)
+        {
+            yield return new WaitForSeconds(timeBeforeStaminaRegen);  
+        }
+
+        yield return new WaitForSeconds(timeBeforeStaminaRegen / 2);
+        
         WaitForSeconds timeToWait = new WaitForSeconds(staminaTimeIncrement);
 
         while(currentStamina < maxStamina)

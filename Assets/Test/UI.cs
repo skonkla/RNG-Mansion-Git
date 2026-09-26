@@ -5,12 +5,14 @@ public class UI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI healthText = default;
     [SerializeField] private TextMeshProUGUI staminaText = default;
+    [SerializeField] private TextMeshProUGUI foodText = default;
 
     private void OnEnable()
     {
         FPSController.OnDamage += UpdateHealth;
         FPSController.OnHeal += UpdateHealth;
         FPSController.OnStaminaChange += UpdateStamina;
+        FPSController.OnEat += UpdateFood;
     }
 
     private void OnDisable()
@@ -18,12 +20,14 @@ public class UI : MonoBehaviour
         FPSController.OnDamage -= UpdateHealth;
         FPSController.OnHeal -= UpdateHealth;
         FPSController.OnStaminaChange -= UpdateStamina;
+        FPSController.OnEat -= UpdateFood;
     }
 
     private void Start()
     {
         UpdateHealth(100);
         UpdateStamina(100);
+        UpdateFood(0);
     }
 
     private void UpdateHealth(float currentHealth)
@@ -35,4 +39,11 @@ public class UI : MonoBehaviour
     {
         staminaText.text = currentStamina.ToString("00");
     }
+
+    private void UpdateFood(int currentFood)
+    {
+        foodText.text = currentFood.ToString();
+    }
+
+
 }

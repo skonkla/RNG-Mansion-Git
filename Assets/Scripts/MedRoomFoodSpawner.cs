@@ -57,10 +57,4 @@ public class MedRoomFoodSpawner : MonoBehaviour
 
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
