@@ -1,11 +1,14 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI healthText = default;
     [SerializeField] private TextMeshProUGUI staminaText = default;
     [SerializeField] private TextMeshProUGUI foodText = default;
+    [SerializeField] public Image staminaBar;
+    public FPSController fPSController;
 
     private void OnEnable()
     {
@@ -38,6 +41,9 @@ public class UI : MonoBehaviour
     private void UpdateStamina(float currentStamina)
     {
         staminaText.text = currentStamina.ToString("00");
+
+        staminaBar.fillAmount = currentStamina / fPSController.maxStamina;
+
     }
 
     private void UpdateFood(int currentFood)

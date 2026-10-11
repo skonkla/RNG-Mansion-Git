@@ -11,6 +11,7 @@ public class TimerManager : MonoBehaviour
     public GameObject monster;
     public bool isPaused = true;
     public GameObject[] foodies;
+    public UpgradeManager upgradeManager;
 
     void Start()
     {
@@ -35,7 +36,14 @@ public class TimerManager : MonoBehaviour
 
     public void AddTime(float timeToAdd)
     {
-        timerTime += timeToAdd;
+        if(upgradeManager.upBonusTime)
+        {
+            timerTime += timeToAdd * 1.5f;
+        }
+        else
+        {
+           timerTime += timeToAdd; 
+        }
     }
 }
 

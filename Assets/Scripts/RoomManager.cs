@@ -11,7 +11,7 @@ public class RoomManager : MonoBehaviour
     public GameObject[] hardRooms;
     public GameObject[] checkpointRooms;
     public GameObject startingRoom;
-    int numOfRooms = 0;
+    public int numOfRooms = 0;
     int i = 0;
     int e = 0;
     int m = 0;
@@ -21,6 +21,7 @@ public class RoomManager : MonoBehaviour
     Vector3 spawnVector;
     public GameObject player;
     public TimerManager timerManager;
+    public ReachTool reachTool;
     public float easyTime;
     public float medTime;
     public float hardTime;
@@ -28,7 +29,7 @@ public class RoomManager : MonoBehaviour
     public GameObject monster;
     public bool unlocked = true;
     public int foodNeeded;
-
+    public bool upgradeAvailable = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -71,7 +72,6 @@ public class RoomManager : MonoBehaviour
 
     public void NewRoom()
     {
-        //Debug.Log("Collision Detected");
             if(numOfRooms < 3) {
                 NewEasyRoom();
                 startingRoom.SetActive(false);
@@ -173,11 +173,13 @@ public class RoomManager : MonoBehaviour
     void NewCheckpoint()
     {
         checkpointRooms[c].SetActive(true);
+        reachTool.AddText();
         spawnTrans = checkpointRooms[c].transform.GetChild(0);
         spawnVector = spawnTrans.transform.position;
         monster.SetActive(false);
         player.transform.position = spawnVector;
         player.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        upgradeAvailable = true;
         
         timerManager.AddTime(chkptTime);
         timerManager.isPaused = true;
@@ -187,12 +189,12 @@ public class RoomManager : MonoBehaviour
         }
         c += 1;
 
-        unlocked = true;
+        foodNeeded = 1;
+        unlocked = false;
 
         numOfRooms += 1;
         Debug.Log("Checkpoint #" + c +" Spawned. This is room #" + numOfRooms);
     }
-
 
     public static GameObject[] RandomizeArray(GameObject[] array){
         int count = array.Length;

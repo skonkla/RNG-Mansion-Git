@@ -30,16 +30,16 @@ public class FPSController : MonoBehaviour
     [SerializeField, Range(1, 180)] private float lowerLookLimit = 80.0f;
 
     [Header("Health Parameters")]
-    [SerializeField] private float maxHealth = 100;
-    private float currentHealth;
+    [SerializeField] public float maxHealth = 100;
+    public float currentHealth;
     public static Action<float> OnTakeDamage;
     public static Action<float> OnDamage;
     public static Action<float> OnHeal;
 
     [Header("Stamina Parameters")]
-    [SerializeField] private float maxStamina = 100;
+    [SerializeField] public float maxStamina = 100;
     [SerializeField] private float staminaLossMultiplier = 5;
-    [SerializeField] private float timeBeforeStaminaRegen = 5;
+    [SerializeField] private float timeBeforeStaminaRegen = 5.0f;
     [SerializeField] private float staminaValIncrement = 1;
     [SerializeField] private float staminaTimeIncrement = 0.1f;
     private float currentStamina;
@@ -69,6 +69,8 @@ public class FPSController : MonoBehaviour
 
     [Header("Reference Variables")]
     public RoomManager roomManager;
+    public UpgradeManager upgradeManager;
+    public GameObject flashlight;
     public static Action<int> OnEat;
 
     private void OnEnable()
@@ -111,6 +113,15 @@ public class FPSController : MonoBehaviour
                 HandleStamina();
 
             ApplyFinalMovements();
+
+            if (Input.GetKeyDown(KeyCode.F) && flashlight.activeInHierarchy == false)
+            {
+                flashlight.SetActive(true);
+            }
+            else if (Input.GetKeyDown(KeyCode.F) && flashlight.activeInHierarchy == true)
+            {
+                flashlight.SetActive(false);
+            }
         }
     }
 
@@ -127,6 +138,16 @@ public class FPSController : MonoBehaviour
             roomManager.foodNeeded--;
             Destroy(other.gameObject);
             OnEat?.Invoke(roomManager.foodNeeded);
+
+            if (upgradeManager.upFoodStamina)
+            {
+                currentStamina += 25;
+            }
+
+            if (upgradeManager.upFoodHeal)
+            {
+                OnTakeDamage(-5);
+            }
         }
     }
 
@@ -170,6 +191,11 @@ public class FPSController : MonoBehaviour
 
     private void HandleStamina()
     {
+        if (upgradeManager.upMaxStamina)
+        {
+           maxStamina = 125; 
+        }
+
         if(IsSprinting && currentInput != Vector2.zero)
         {
             if(regeneratingStamina != null)
@@ -197,6 +223,8 @@ public class FPSController : MonoBehaviour
     private void ApplyDamage(float dmg)
     {
         currentHealth -= dmg;
+        if(currentHealth > maxHealth)
+            currentHealth = maxHealth;
         OnDamage?.Invoke(currentHealth);
 
         if(currentHealth <= 0)
@@ -207,7 +235,7 @@ public class FPSController : MonoBehaviour
     {
         currentHealth = 0;
 
-        print("Dead");
+        //CanMove = false;
     }
 
     private void ApplyFinalMovements()
@@ -225,10 +253,26 @@ public class FPSController : MonoBehaviour
     {
         if(currentStamina == 0)
         {
-            yield return new WaitForSeconds(timeBeforeStaminaRegen);  
+            if (upgradeManager.upStaminaRecharge)
+            {
+                yield return new WaitForSeconds(timeBeforeStaminaRegen / 1.5f);
+            }
+            else
+            {
+                yield return new WaitForSeconds(timeBeforeStaminaRegen);   
+            }
+             
         }
 
-        yield return new WaitForSeconds(timeBeforeStaminaRegen / 2);
+        if (upgradeManager.upStaminaRecharge)
+        {
+           yield return new WaitForSeconds(timeBeforeStaminaRegen / 3.0f); 
+        }
+        else
+        {
+            yield return new WaitForSeconds(timeBeforeStaminaRegen / 2.0f);
+        }
+        
         
         WaitForSeconds timeToWait = new WaitForSeconds(staminaTimeIncrement);
 
