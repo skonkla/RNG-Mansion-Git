@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 5347084495047104358}
   m_Layer: 0
   m_Name: table small (4)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -982,7 +982,7 @@ GameObject:
   - component: {fileID: 315302283295361150}
   m_Layer: 0
   m_Name: Rug Spot
-  m_TagString: Untagged
+  m_TagString: Footsteps/Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1429,7 +1429,7 @@ GameObject:
   - component: {fileID: 7356375122175379070}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1905,7 +1905,7 @@ GameObject:
   - component: {fileID: 8941086275850559532}
   m_Layer: 0
   m_Name: table small (1)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3252,7 +3252,7 @@ GameObject:
   - component: {fileID: 670868761764836927}
   m_Layer: 0
   m_Name: Rug Spot
-  m_TagString: Untagged
+  m_TagString: Footsteps/Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4353,7 +4353,7 @@ GameObject:
   - component: {fileID: 3162363938197982319}
   m_Layer: 0
   m_Name: table small (6)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5218,7 +5218,7 @@ GameObject:
   - component: {fileID: 319165882644902753}
   m_Layer: 0
   m_Name: table small (8)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5538,7 +5538,7 @@ GameObject:
   - component: {fileID: 880534848021326484}
   m_Layer: 0
   m_Name: table small
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6206,7 +6206,7 @@ GameObject:
   - component: {fileID: 2736913689241269762}
   m_Layer: 0
   m_Name: table small (3)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6296,7 +6296,7 @@ GameObject:
   - component: {fileID: 6234386675023240179}
   m_Layer: 0
   m_Name: Rug Spot (2)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6862,7 +6862,7 @@ GameObject:
   - component: {fileID: 3867989002237819580}
   m_Layer: 0
   m_Name: table small (11)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9849,7 +9849,7 @@ GameObject:
   - component: {fileID: 3728404010888238702}
   m_Layer: 0
   m_Name: table small (9)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9939,7 +9939,7 @@ GameObject:
   - component: {fileID: 5698162901160693599}
   m_Layer: 0
   m_Name: table small (7)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11606,7 +11606,7 @@ GameObject:
   - component: {fileID: 4834997143189167473}
   m_Layer: 0
   m_Name: table small (10)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12563,7 +12563,7 @@ GameObject:
   - component: {fileID: 6356268717389776741}
   m_Layer: 0
   m_Name: table small (2)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13597,7 +13597,7 @@ GameObject:
   - component: {fileID: 6133948069918403005}
   m_Layer: 0
   m_Name: Rug Spot (1)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16168,7 +16168,7 @@ GameObject:
   - component: {fileID: 6667990313188444563}
   m_Layer: 0
   m_Name: table small (5)
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18054,6 +18054,10 @@ PrefabInstance:
     - target: {fileID: 5452379479464963842, guid: 69f39ba34f6d571408e7e5370e5c0006, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591941856060964248, guid: 69f39ba34f6d571408e7e5370e5c0006, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8848825002202498478, guid: 69f39ba34f6d571408e7e5370e5c0006, type: 3}
       propertyPath: m_LocalPosition.x

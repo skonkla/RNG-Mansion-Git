@@ -1,7 +1,8 @@
 using UnityEngine;
 using System;
 using System.Collections;
-using TMPro;
+using Random = UnityEngine.Random;
+
 
 public class FPSController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class FPSController : MonoBehaviour
     [SerializeField] private bool canJump = true;
     [SerializeField] private bool canUseHeadbob = true;
     [SerializeField] private bool useStamina = true;
+    [SerializeField] private bool useFootsteps = true;
 
     [Header("Controls")]
     [SerializeField] private KeyCode sprintKey = KeyCode.LeftShift;
@@ -56,6 +58,17 @@ public class FPSController : MonoBehaviour
     [SerializeField] private float walkBobAmount = 0.05f;
     [SerializeField] private float sprintBobSpeed = 18f;
     [SerializeField] private float sprintBobAmount = 0.1f;
+
+    [Header("Footstep Parameters")]
+    [SerializeField] private float baseStepSpeed = 0.5f;
+    [SerializeField] private float sprintStepMultiplier = 0.6f;
+    [SerializeField] private AudioSource footStepAudioSource = default;
+    [SerializeField] private AudioClip[] woodClips = default;
+    [SerializeField] private AudioClip[] carpetClips = default;
+    [SerializeField] private AudioClip[] tileClips = default;
+    private float footstepTimer = 0;
+    private float GetCurrentOffset => IsSprinting ? baseStepSpeed * sprintStepMultiplier : baseStepSpeed;
+
     private float defaultYPos = 0;
     private float timer;
 
@@ -71,7 +84,8 @@ public class FPSController : MonoBehaviour
     public RoomManager roomManager;
     public UpgradeManager upgradeManager;
     public GameObject flashlight;
-    public static Action<int> OnEat;
+    public UI uI;
+    
 
     private void OnEnable()
     {
@@ -112,6 +126,9 @@ public class FPSController : MonoBehaviour
             if(useStamina)
                 HandleStamina();
 
+            if(useFootsteps)
+                HandleFootsteps();
+
             ApplyFinalMovements();
 
             if (Input.GetKeyDown(KeyCode.F) && flashlight.activeInHierarchy == false)
@@ -129,15 +146,19 @@ public class FPSController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Door") && roomManager.unlocked == true)
         {
+            //print("Time to beat that room: " + roomManager.timeToBeat);
+            //roomManager.timeToBeat = 0f;
             roomManager.NewRoom();
-            OnEat?.Invoke(roomManager.foodNeeded);
+            
         }
 
         if (other.gameObject.CompareTag("Food"))
         {
             roomManager.foodNeeded--;
             Destroy(other.gameObject);
-            OnEat?.Invoke(roomManager.foodNeeded);
+            
+
+            uI.foodicons[roomManager.foodNeeded].SetActive(false);
 
             if (upgradeManager.upFoodStamina)
             {
@@ -220,6 +241,39 @@ public class FPSController : MonoBehaviour
         }
     }
 
+    private void HandleFootsteps()
+    {
+        if (!characterController.isGrounded) return;
+        if (currentInput == Vector2.zero) return;
+
+        footstepTimer -= Time.deltaTime;
+
+        if(footstepTimer <= 0)
+        {
+            if(Physics.Raycast(characterController.transform.position, Vector3.down, out RaycastHit hit, 3))
+            {
+                switch (hit.collider.tag)
+                {
+                    case "Footsteps/Wood":
+                    footStepAudioSource.PlayOneShot(woodClips[Random.Range(0, woodClips.Length - 1)]);
+                        break;
+                    case "Footsteps/Tile":
+                    footStepAudioSource.PlayOneShot(tileClips[Random.Range(0, tileClips.Length - 1)]);
+                        break;
+                    case "Footsteps/Carpet":
+                    footStepAudioSource.PlayOneShot(carpetClips[Random.Range(0, carpetClips.Length - 1)]);
+                        break;
+                    default:
+                        footStepAudioSource.PlayOneShot(woodClips[Random.Range(0, woodClips.Length - 1)]);
+                        break;
+                
+                }
+            }
+
+            footstepTimer = GetCurrentOffset;
+        }
+    }
+
     private void ApplyDamage(float dmg)
     {
         currentHealth -= dmg;
@@ -234,8 +288,8 @@ public class FPSController : MonoBehaviour
     private void KillPlayer()
     {
         currentHealth = 0;
-
-        //CanMove = false;
+        CanMove = false;
+        uI.GameOver();
     }
 
     private void ApplyFinalMovements()

@@ -451,7 +451,7 @@ Light:
   m_InnerSpotAngle: 19.984821
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 8365079742379381709}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Footsteps/Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2338,6 +2338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table small (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6862368574536986829, guid: 2bc1f3be5b59ce242baee56854572ecb, type: 3}
+      propertyPath: m_TagString
+      value: Footsteps/Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2399,6 +2403,10 @@ PrefabInstance:
     - target: {fileID: 6862368574536986829, guid: 2bc1f3be5b59ce242baee56854572ecb, type: 3}
       propertyPath: m_Name
       value: table small (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862368574536986829, guid: 2bc1f3be5b59ce242baee56854572ecb, type: 3}
+      propertyPath: m_TagString
+      value: Footsteps/Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2787,6 +2795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table small (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6862368574536986829, guid: 2bc1f3be5b59ce242baee56854572ecb, type: 3}
+      propertyPath: m_TagString
+      value: Footsteps/Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2848,6 +2860,10 @@ PrefabInstance:
     - target: {fileID: 6862368574536986829, guid: 2bc1f3be5b59ce242baee56854572ecb, type: 3}
       propertyPath: m_Name
       value: table small (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862368574536986829, guid: 2bc1f3be5b59ce242baee56854572ecb, type: 3}
+      propertyPath: m_TagString
+      value: Footsteps/Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3100,6 +3116,10 @@ PrefabInstance:
     - target: {fileID: 6862368574536986829, guid: 2bc1f3be5b59ce242baee56854572ecb, type: 3}
       propertyPath: m_Name
       value: table small
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862368574536986829, guid: 2bc1f3be5b59ce242baee56854572ecb, type: 3}
+      propertyPath: m_TagString
+      value: Footsteps/Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3472,6 +3492,10 @@ PrefabInstance:
     - target: {fileID: 6862368574536986829, guid: 2bc1f3be5b59ce242baee56854572ecb, type: 3}
       propertyPath: m_Name
       value: table small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862368574536986829, guid: 2bc1f3be5b59ce242baee56854572ecb, type: 3}
+      propertyPath: m_TagString
+      value: Footsteps/Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
