@@ -43,13 +43,16 @@ public class RoomManager : MonoBehaviour
     public float timeToBeat;
     public UI uI;
     public FPSController fPSController;
+    public DamageTest damageTest;
+    public AudioSource playerAudioSource;
+    public Transition transition;
     Transform spawnTrans;
     Vector3 spawnVector;
-    
+
+    [Header("Sounds")]
+    [SerializeField] private AudioClip[] doorCreaks = default;
     
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         for (i = 0; i < easyRooms.Length; i++)
@@ -91,6 +94,19 @@ public class RoomManager : MonoBehaviour
 
     public void NewRoom()
     {
+        if(monster.activeInHierarchy == false)
+        {
+            //DO something lol
+        }
+
+        damageTest.speed += ((numOfRooms) * 2) / 100f;
+        damageTest.agent.speed = damageTest.speed;
+        print("Monster speed is now " + damageTest.agent.speed);
+
+        //playerAudioSource.PlayOneShot(doorCreaks[Random.Range(0, doorCreaks.Length - 1)]);
+
+        transition.FadeToBlack();
+
         if(numOfRooms < easyRoomsNeeded) {
             NewEasyRoom();
             startingRoom.SetActive(false);

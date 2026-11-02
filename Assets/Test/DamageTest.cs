@@ -8,8 +8,9 @@ public class DamageTest : MonoBehaviour
     private Coroutine monsterContact;
     private Coroutine monsterSlow;
     public FPSController fPSController;
-    private NavMeshAgent agent;
-    private float speed;
+    public NavMeshAgent agent;
+    public RoomManager roomManager;
+    public float speed;
     public float slowedSpeed = 1f;
 
     void Start()
@@ -25,6 +26,11 @@ public class DamageTest : MonoBehaviour
             print("The monster is slowed while the coroutine is inactive, resuming normal speed");
             agent.speed = speed;
         }
+    }
+
+    void Update()
+    {
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -70,15 +76,16 @@ public class DamageTest : MonoBehaviour
 
     private IEnumerator MonsterSlow()
     {
-        print("Slowing it down...");
+        //print("Slowing it down...");
         agent.speed = slowedSpeed;
 
-        print("Waiting for 3.5 seconds!");
+        //print("Waiting for 3.5 seconds!");
         yield return new WaitForSeconds(3.50f);
 
-        print("resuming normal speed");
+        //print("resuming normal speed");
         agent.speed = speed;
 
         monsterContact = null;
     }
+
 }
