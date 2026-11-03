@@ -12,16 +12,16 @@ public class RoomManager : MonoBehaviour
     public GameObject[] medRooms;
     public GameObject[] hardRooms;
     public GameObject[] checkpointRooms;
+    public GameObject[] foodRooms;
     public GameObject startingRoom;
     public int numOfRooms = 0;
     public int easyRoomsNeeded;
     public int medRoomsNeeded;
     public int hardRoomsNeeded;
     int i = 0;
-    int e = 0;
-    int m = 0;
-    int h = 0;
-    int c = 0;
+    int roomIndex;
+    int checkpointIndex;
+    private int lastRandomNumber;
     
     [Header("Bonus Times")]
     public float easyTime;
@@ -55,17 +55,9 @@ public class RoomManager : MonoBehaviour
 
     void Start()
     {
-        for (i = 0; i < easyRooms.Length; i++)
+        for (i = 0; i < foodRooms.Length; i++)
         {
-            easyRooms[i].SetActive(false);
-        }
-        for (i = 0; i < medRooms.Length; i++)
-        {
-            medRooms[i].SetActive(false);
-        }
-        for (i = 0; i < hardRooms.Length; i++)
-        {
-            hardRooms[i].SetActive(false);
+            foodRooms[i].SetActive(false);
         }
         for (i = 0; i < checkpointRooms.Length; i++)
         {
@@ -73,13 +65,6 @@ public class RoomManager : MonoBehaviour
         }
 
         endScreen.SetActive(false);
-
-        RandomizeArray(easyRooms);
-        RandomizeArray(medRooms);
-        RandomizeArray(hardRooms);
-        RandomizeArray(checkpointRooms);
-
-        //Debug.Log(easyRooms[0] + " " + easyRooms[1] + " " + easyRooms[2]);
         
         i = 0;
     }
@@ -107,34 +92,54 @@ public class RoomManager : MonoBehaviour
 
         transition.FadeToBlack();
 
-        if(numOfRooms < easyRoomsNeeded) {
-            NewEasyRoom();
-            startingRoom.SetActive(false);
+        if((numOfRooms + 1) % 5 == 0)
+        {
+            if(foodRooms[roomIndex].activeInHierarchy)
+                {
+                    foodRooms[roomIndex].SetActive(false);
+                }
+            
+            checkpointIndex = GetUniqueRandom(checkpointRooms.Length);
+
+            checkpointRooms[checkpointIndex].SetActive(true);
+            reachTool.AddText();
+            spawnTrans = checkpointRooms[checkpointIndex].transform.GetChild(0);
+            spawnVector = spawnTrans.transform.position;
+            monster.SetActive(false);
+            fPSController.flashlight.SetActive(false);
+            player.transform.position = spawnVector;
+            player.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            upgradeAvailable = true;
+        
+            timerManager.AddTime(chkptTime);
+            timerManager.isPaused = true;
+
+            foodNeeded = 1;
+            unlocked = false;
+
+            numOfRooms += 1;
+            Debug.Log(checkpointRooms[checkpointIndex].name + " Spawned. This is room #" + numOfRooms);
+
         }
-        else if(numOfRooms == easyRoomsNeeded) {
-            NewCheckpoint();
-            easyRooms[2].SetActive(false);
-        }
-        else if(numOfRooms < easyRoomsNeeded + medRoomsNeeded + 1) {
-            NewMedRoom();
-            checkpointRooms[0].SetActive(false);            }
-        else if(numOfRooms == easyRoomsNeeded + medRoomsNeeded + 1) {
-            NewCheckpoint();
-            medRooms[4].SetActive(false);
+        else{
+
+            if(numOfRooms > 0)
+            {
+                if(foodRooms[roomIndex].activeInHierarchy)
+                {
+                    foodRooms[roomIndex].SetActive(false);
+                }
+                if(checkpointRooms[checkpointIndex].activeInHierarchy)
+                {
+                    checkpointRooms[checkpointIndex].SetActive(false);
+                }
+                
             }
-        else if(numOfRooms < easyRoomsNeeded + medRoomsNeeded + hardRoomsNeeded + 2) {
-            NewHardRoom();
-            checkpointRooms[1].SetActive(false);
-            }
-        else if(numOfRooms >= easyRoomsNeeded + medRoomsNeeded + hardRoomsNeeded + 2) {
-            Win();
-        }
-    }
 
-    void NewEasyRoom()
-    {
-        easyRooms[e].SetActive(true);
-        spawnTrans = easyRooms[e].transform.GetChild(0);
+        roomIndex = GetUniqueRandom(foodRooms.Length);
+
+        foodRooms[roomIndex].SetActive(true);
+        spawnTrans = foodRooms[roomIndex].transform.GetChild(0);
         spawnVector = spawnTrans.transform.position;
         monster.SetActive(false);
         fPSController.flashlight.SetActive(true);
@@ -142,124 +147,46 @@ public class RoomManager : MonoBehaviour
         monster.transform.position = spawnVector;
         player.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
 
-        timerManager.AddTime(easyTime);
-        timerManager.isPaused = false;
-        
-        if(e > 0){
-            easyRooms[e - 1].SetActive(false);
-        }
-        e += 1;
+        if (foodRooms[roomIndex].CompareTag("Easy"))
+        {
+            timerManager.AddTime(easyTime);
+            foodNeeded = 2;
 
-        foodNeeded = 2;
-        uI.food1.SetActive(true);
-        uI.food2.SetActive(true);
+        }
+        else if (foodRooms[roomIndex].CompareTag("Medium"))
+        {
+            timerManager.AddTime(medTime);
+            foodNeeded = 3;
+        }
+        else if (foodRooms[roomIndex].CompareTag("Hard"))
+        {
+            timerManager.AddTime(hardTime);
+            foodNeeded = 4;
+        }
+
+        timerManager.isPaused = false;
         unlocked = false;
 
-        for (i = 0; i < uI.foodicons.Length; i++)
+        for (i = 0; i < foodNeeded; i++)
         {
             uI.foodicons[i].SetActive(true);
         }
 
         numOfRooms += 1;
-        Debug.Log("Easy Room #" + e +" Spawned. This is room #" + numOfRooms);
-    }
-    void NewMedRoom()
-    {
-        medRooms[m].SetActive(true);
-        spawnTrans = medRooms[m].transform.GetChild(0);
-        spawnVector = spawnTrans.transform.position;
-        monster.SetActive(false);
-        fPSController.flashlight.SetActive(true);
-        player.transform.position = spawnVector;
-        monster.transform.position = spawnVector;
-        player.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-        
-        timerManager.AddTime(medTime);
-        timerManager.isPaused = false;
+        Debug.Log(foodRooms[roomIndex].name + " Spawned. This is room #" + numOfRooms);
 
-        if(m > 0){
-            medRooms[m - 1].SetActive(false);
         }
-        m += 1;
+    }
 
-        foodNeeded = 3;
-        uI.food1.SetActive(true);
-        uI.food2.SetActive(true);
-        uI.food3.SetActive(true);
-        unlocked = false;
-
-        for (i = 0; i < uI.foodicons.Length; i++)
+    public int GetUniqueRandom(int max)
+    {
+        int result = Random.Range(0, max);
+        while (result == lastRandomNumber)
         {
-            uI.foodicons[i].SetActive(true);
+            result = Random.Range(0, max);
         }
-
-        numOfRooms += 1;
-        Debug.Log("Medium Room #" + m +" Spawned. This is room #" + numOfRooms);
-    }
-    void NewHardRoom()
-    {
-        hardRooms[h].SetActive(true);
-        spawnTrans = hardRooms[h].transform.GetChild(0);
-        spawnVector = spawnTrans.transform.position;
-        monster.SetActive(false);
-        fPSController.flashlight.SetActive(true);
-        player.transform.position = spawnVector;
-        monster.transform.position = spawnVector;
-        player.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-        
-        timerManager.AddTime(hardTime);
-        timerManager.isPaused = false;
-
-        if(h > 0){
-            hardRooms[h - 1].SetActive(false);
-        }
-        h += 1;
-
-        foodNeeded = 4;
-        uI.food1.SetActive(true);
-        uI.food2.SetActive(true);
-        uI.food3.SetActive(true);
-        uI.food4.SetActive(true);
-        unlocked = false;
-
-        for (i = 0; i < uI.foodicons.Length; i++)
-        {
-            uI.foodicons[i].SetActive(true);
-        }
-
-        numOfRooms += 1;
-        Debug.Log("Hard Room #" + h +" Spawned. This is room #" + numOfRooms);
-    }
-    void NewCheckpoint()
-    {
-        checkpointRooms[c].SetActive(true);
-        reachTool.AddText();
-        spawnTrans = checkpointRooms[c].transform.GetChild(0);
-        spawnVector = spawnTrans.transform.position;
-        monster.SetActive(false);
-        fPSController.flashlight.SetActive(false);
-        player.transform.position = spawnVector;
-        player.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-        upgradeAvailable = true;
-        
-        timerManager.AddTime(chkptTime);
-        timerManager.isPaused = true;
-
-        if(c > 0){
-            checkpointRooms[c - 1].SetActive(false);
-        }
-        c += 1;
-
-        foodNeeded = 1;
-        unlocked = false;
-
-        uI.food1.SetActive(false);
-        uI.food2.SetActive(false);
-        uI.food3.SetActive(false);
-        uI.food4.SetActive(false);
-
-        numOfRooms += 1;
-        Debug.Log("Checkpoint #" + c +" Spawned. This is room #" + numOfRooms);
+        lastRandomNumber = result;
+        return result;
     }
 
     void Win()

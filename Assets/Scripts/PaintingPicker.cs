@@ -6,7 +6,7 @@ public class PaintingPicker : MonoBehaviour
     public GameObject painting2;
     public int x;
 
-    void Start()
+    void OnEnable()
     {
         painting1.SetActive(false);
         painting2.SetActive(false);

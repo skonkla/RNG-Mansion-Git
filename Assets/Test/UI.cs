@@ -11,10 +11,6 @@ public class UI : MonoBehaviour
     [Header("HUD")]
     public Image staminaBar;
     public FPSController fPSController;
-    public GameObject food1;
-    public GameObject food2;
-    public GameObject food3;
-    public GameObject food4;
     public GameObject[] foodicons;
 
     [Header("Other References")]
@@ -48,10 +44,10 @@ public class UI : MonoBehaviour
         UpdateHealth(100);
         UpdateStamina(100);
         
-        food1.SetActive(false);
-        food2.SetActive(false);
-        food3.SetActive(false);
-        food4.SetActive(false);
+        for (int i = 0; i < foodicons.Length; i++)
+        {
+            foodicons[i].SetActive(false);
+        }
     }
 
     private void UpdateHealth(float currentHealth)

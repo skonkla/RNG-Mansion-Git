@@ -6,7 +6,7 @@ public class WindoorPicker : MonoBehaviour
     public GameObject window;
     public int x;
 
-    void Start()
+    void OnEnable()
     {
         door.SetActive(false);
         window.SetActive(false);
@@ -20,6 +20,7 @@ public class WindoorPicker : MonoBehaviour
         {
             window.SetActive(true);
         }
+
     }
 
     // Update is called once per frame

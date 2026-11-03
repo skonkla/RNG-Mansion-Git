@@ -5,7 +5,7 @@ public class RugPicker : MonoBehaviour
     public GameObject rug;
     public int x;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnEnable()
     {
         rug.SetActive(false);
         x = Random.Range(1, x + 1);

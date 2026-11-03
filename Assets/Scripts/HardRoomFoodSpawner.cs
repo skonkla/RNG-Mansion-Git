@@ -3,7 +3,6 @@ using UnityEngine;
 public class HardRoomFoodSpawner : MonoBehaviour
 {
     public RoomManager roomManager;
-    GameObject currRoom;
     Transform spawn1Trans;
     Transform spawn2Trans;
     Transform spawn3Trans;
@@ -12,38 +11,31 @@ public class HardRoomFoodSpawner : MonoBehaviour
     Transform spawn6Trans;
     Transform spawn7Trans;
     public TimerManager timerManager;
-    int i;
     Vector3[] spawnPoints = new Vector3[7];
     int s;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnEnable()
     {
-
-        for (i = 0; i < roomManager.hardRooms.Length; ++i)
-        {
-
-            currRoom = roomManager.hardRooms[i];
-
-            spawn1Trans = currRoom.transform.GetChild(1);
+            spawn1Trans = gameObject.transform.GetChild(1);
             spawnPoints[0] = spawn1Trans.transform.position;
 
-            spawn2Trans = currRoom.transform.GetChild(2);
+            spawn2Trans = gameObject.transform.GetChild(2);
             spawnPoints[1] = spawn2Trans.transform.position;
 
-            spawn3Trans = currRoom.transform.GetChild(3);
+            spawn3Trans = gameObject.transform.GetChild(3);
             spawnPoints[2] = spawn3Trans.transform.position;
 
-            spawn4Trans = currRoom.transform.GetChild(4);
+            spawn4Trans = gameObject.transform.GetChild(4);
             spawnPoints[3] = spawn4Trans.transform.position;
 
-            spawn5Trans = currRoom.transform.GetChild(5);
+            spawn5Trans = gameObject.transform.GetChild(5);
             spawnPoints[4] = spawn5Trans.transform.position;
 
-            spawn6Trans = currRoom.transform.GetChild(6);
+            spawn6Trans = gameObject.transform.GetChild(6);
             spawnPoints[5] = spawn6Trans.transform.position;
 
-            spawn7Trans = currRoom.transform.GetChild(7);
+            spawn7Trans = gameObject.transform.GetChild(7);
             spawnPoints[6] = spawn7Trans.transform.position;
 
             RoomManager.RandomizeVectArray(spawnPoints);
@@ -65,8 +57,5 @@ public class HardRoomFoodSpawner : MonoBehaviour
             s = Random.Range(0, timerManager.foodies.Length);
 
             Instantiate(timerManager.foodies[s], spawnPoints[3], timerManager.foodies[s].transform.rotation);
-            
-
-        }
     }
 }

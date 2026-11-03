@@ -236,9 +236,8 @@ GameObject:
   - component: {fileID: 60461132810513441}
   - component: {fileID: 2253052459343626479}
   - component: {fileID: 9076893968512938754}
-  - component: {fileID: 3313501592844675404}
   m_Layer: 0
-  m_Name: Rug Spot
+  m_Name: Rug4
   m_TagString: Footsteps/Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,11 +252,11 @@ Transform:
   m_GameObject: {fileID: 539858310478147358}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.000054597847, z: -0, w: 1}
-  m_LocalPosition: {x: 10.79, y: -0, z: -15.24}
+  m_LocalPosition: {x: 10.790001, y: 0, z: -15.24}
   m_LocalScale: {x: 2.75, y: 0.019882632, z: 3.9478724}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 870673638528186284}
+  m_Father: {fileID: 5530570674715985362}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &2253052459343626479
 MeshFilter:
@@ -317,20 +316,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3313501592844675404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539858310478147358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
-  rug: {fileID: 539858310478147358}
-  x: 3
 --- !u!1 &567521971848924240
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +961,53 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1591061338376366103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7027931919747192247}
+  - component: {fileID: 6914231124713005430}
+  m_Layer: 0
+  m_Name: Rug Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7027931919747192247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591061338376366103}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8493902849088018586}
+  m_Father: {fileID: 870673638528186284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6914231124713005430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591061338376366103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
+  rug: {fileID: 6760967786824475066}
+  x: 3
 --- !u!1 &1592819202369557571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1065,53 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.8179181, y: 12.166409, z: 6.3850865}
   m_Center: {x: -0.4089605, y: 4.007698, z: 45.49454}
+--- !u!1 &1779554059020336472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6632882890383170460}
+  - component: {fileID: 7079470837799249498}
+  m_Layer: 0
+  m_Name: Rug Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6632882890383170460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779554059020336472}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8581207060117455527}
+  m_Father: {fileID: 870673638528186284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7079470837799249498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779554059020336472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
+  rug: {fileID: 9022466720622841495}
+  x: 3
 --- !u!1 &1914319904531090244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,9 +1356,8 @@ GameObject:
   - component: {fileID: 2532760938511501590}
   - component: {fileID: 8660881906218166300}
   - component: {fileID: 5146669998754638554}
-  - component: {fileID: 1061450457408140114}
   m_Layer: 0
-  m_Name: Rug Spot (2)
+  m_Name: Rug8
   m_TagString: Footsteps/Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1294,11 +1372,11 @@ Transform:
   m_GameObject: {fileID: 2349196413738886362}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7068127, z: -0, w: 0.70740086}
-  m_LocalPosition: {x: 8.32, y: -0, z: 2.01}
-  m_LocalScale: {x: 2.7499993, y: 0.019882632, z: 3.9478712}
+  m_LocalPosition: {x: 8.32, y: 0, z: 2.0100002}
+  m_LocalScale: {x: 2.7499993, y: 0.019882632, z: 3.947871}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 870673638528186284}
+  m_Father: {fileID: 4795753398676920873}
   m_LocalEulerAnglesHint: {x: 0, y: 0.041, z: 0}
 --- !u!33 &8660881906218166300
 MeshFilter:
@@ -1358,20 +1436,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1061450457408140114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2349196413738886362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
-  rug: {fileID: 2349196413738886362}
-  x: 3
 --- !u!1 &2376056766783070874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1837,14 +1901,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4518546735026467773}
-  - {fileID: 7655199754823928279}
-  - {fileID: 99188143983965178}
-  - {fileID: 60461132810513441}
-  - {fileID: 8493902849088018586}
-  - {fileID: 8581207060117455527}
-  - {fileID: 2522445718803638152}
-  - {fileID: 2532760938511501590}
+  - {fileID: 6424882344022724901}
+  - {fileID: 8994973726216869239}
+  - {fileID: 1578695176155382957}
+  - {fileID: 5530570674715985362}
+  - {fileID: 7027931919747192247}
+  - {fileID: 6632882890383170460}
+  - {fileID: 3637656665578400118}
+  - {fileID: 4795753398676920873}
   m_Father: {fileID: 4125123886420216152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3028440997231940010
@@ -1971,9 +2035,8 @@ GameObject:
   - component: {fileID: 4518546735026467773}
   - component: {fileID: 8200120476559757547}
   - component: {fileID: 1022807745555429721}
-  - component: {fileID: 3418370366629558193}
   m_Layer: 0
-  m_Name: Rug Spot
+  m_Name: Rug1
   m_TagString: Footsteps/Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1988,11 +2051,11 @@ Transform:
   m_GameObject: {fileID: 3147185257045704055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -9.02, y: 0, z: -7.52}
-  m_LocalScale: {x: 2.0624998, y: 0.014911974, z: 2.960904}
+  m_LocalPosition: {x: -9.019997, y: 0, z: -7.5200005}
+  m_LocalScale: {x: 2.0624998, y: 0.014911974, z: 2.9609036}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 870673638528186284}
+  m_Father: {fileID: 6424882344022724901}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &8200120476559757547
 MeshFilter:
@@ -2052,20 +2115,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3418370366629558193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3147185257045704055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
-  rug: {fileID: 3147185257045704055}
-  x: 3
 --- !u!1 &3199227788237265460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,6 +2407,53 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.75150216, y: 10.712628, z: 6.368239}
   m_Center: {x: -0.021279432, y: 4.433974, z: -0.025944987}
+--- !u!1 &3882362216305983846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6424882344022724901}
+  - component: {fileID: 3891032052004992909}
+  m_Layer: 0
+  m_Name: Rug Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6424882344022724901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882362216305983846}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4518546735026467773}
+  m_Father: {fileID: 870673638528186284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3891032052004992909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882362216305983846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
+  rug: {fileID: 3147185257045704055}
+  x: 3
 --- !u!1 &3958267472058889086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2369,9 +2465,8 @@ GameObject:
   - component: {fileID: 7655199754823928279}
   - component: {fileID: 8423583487954210604}
   - component: {fileID: 5815535883301743202}
-  - component: {fileID: 2791748826255937808}
   m_Layer: 0
-  m_Name: Rug Spot
+  m_Name: Rug2
   m_TagString: Footsteps/Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2386,11 +2481,11 @@ Transform:
   m_GameObject: {fileID: 3958267472058889086}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -9.04, y: 0, z: -0.49}
-  m_LocalScale: {x: 2.5798573, y: 0.018652495, z: 3.703617}
+  m_LocalPosition: {x: -9.040001, y: 0, z: -0.48999977}
+  m_LocalScale: {x: 2.579857, y: 0.018652495, z: 3.703617}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 870673638528186284}
+  m_Father: {fileID: 8994973726216869239}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &8423583487954210604
 MeshFilter:
@@ -2450,20 +2545,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2791748826255937808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3958267472058889086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
-  rug: {fileID: 3958267472058889086}
-  x: 3
 --- !u!1 &4133648645621951002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,6 +2838,53 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &4735556053599223337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4795753398676920873}
+  - component: {fileID: 2153248251885783600}
+  m_Layer: 0
+  m_Name: Rug Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4795753398676920873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4735556053599223337}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2532760938511501590}
+  m_Father: {fileID: 870673638528186284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2153248251885783600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4735556053599223337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
+  rug: {fileID: 2349196413738886362}
+  x: 3
 --- !u!1 &4869955393430408227
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,7 +3010,7 @@ GameObject:
   - component: {fileID: 3430757986657647224}
   m_Layer: 0
   m_Name: Hard Room
-  m_TagString: Untagged
+  m_TagString: Hard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3812,6 +3940,53 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6014055887108643541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5530570674715985362}
+  - component: {fileID: 7585479688900621550}
+  m_Layer: 0
+  m_Name: Rug Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5530570674715985362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014055887108643541}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 60461132810513441}
+  m_Father: {fileID: 870673638528186284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7585479688900621550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014055887108643541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
+  rug: {fileID: 539858310478147358}
+  x: 3
 --- !u!1 &6062661068504492290
 GameObject:
   m_ObjectHideFlags: 0
@@ -3823,9 +3998,8 @@ GameObject:
   - component: {fileID: 99188143983965178}
   - component: {fileID: 3155117821147435635}
   - component: {fileID: 1947229046319056377}
-  - component: {fileID: 5825177416151634780}
   m_Layer: 0
-  m_Name: Rug Spot (1)
+  m_Name: Rug3
   m_TagString: Footsteps/Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3840,11 +4014,11 @@ Transform:
   m_GameObject: {fileID: 6062661068504492290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.00036130843, z: -0, w: 1}
-  m_LocalPosition: {x: 25.79, y: 0, z: -3.81}
-  m_LocalScale: {x: 2.2881649, y: 0.016543543, z: 3.2848663}
+  m_LocalPosition: {x: 25.79, y: 0, z: -3.8099995}
+  m_LocalScale: {x: 2.288165, y: 0.016543543, z: 3.2848666}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 870673638528186284}
+  m_Father: {fileID: 1578695176155382957}
   m_LocalEulerAnglesHint: {x: 0, y: 0.041, z: 0}
 --- !u!33 &3155117821147435635
 MeshFilter:
@@ -3904,20 +4078,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5825177416151634780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6062661068504492290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
-  rug: {fileID: 6062661068504492290}
-  x: 3
 --- !u!1 &6064156334365190427
 GameObject:
   m_ObjectHideFlags: 0
@@ -4153,9 +4313,8 @@ GameObject:
   - component: {fileID: 2522445718803638152}
   - component: {fileID: 1291826147136881290}
   - component: {fileID: 8985057692255960292}
-  - component: {fileID: 4301382883373724319}
   m_Layer: 0
-  m_Name: Rug Spot (2)
+  m_Name: Rug7
   m_TagString: Footsteps/Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4169,12 +4328,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6399741608373583259}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 12.94, y: 0, z: -4.11}
-  m_LocalScale: {x: 1.4112422, y: 0.013380216, z: 4.1511865}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 12.939999, y: 0, z: -4.1100006}
+  m_LocalScale: {x: 1.4112421, y: 0.013380216, z: 4.1511865}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 870673638528186284}
+  m_Father: {fileID: 3637656665578400118}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &1291826147136881290
 MeshFilter:
@@ -4234,20 +4393,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4301382883373724319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6399741608373583259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
-  rug: {fileID: 6399741608373583259}
-  x: 3
 --- !u!1 &6411323406007990467
 GameObject:
   m_ObjectHideFlags: 0
@@ -4400,6 +4545,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3430757986657647224}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &6685141752529972450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3637656665578400118}
+  - component: {fileID: 1805831854539908231}
+  m_Layer: 0
+  m_Name: Rug Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3637656665578400118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685141752529972450}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2522445718803638152}
+  m_Father: {fileID: 870673638528186284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1805831854539908231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685141752529972450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
+  rug: {fileID: 6399741608373583259}
+  x: 3
 --- !u!1 &6760967786824475066
 GameObject:
   m_ObjectHideFlags: 0
@@ -4411,9 +4603,8 @@ GameObject:
   - component: {fileID: 8493902849088018586}
   - component: {fileID: 4594383731829105690}
   - component: {fileID: 1092767184755430785}
-  - component: {fileID: 6258097298787444131}
   m_Layer: 0
-  m_Name: Rug Spot
+  m_Name: Rug5
   m_TagString: Footsteps/Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4428,11 +4619,11 @@ Transform:
   m_GameObject: {fileID: 6760967786824475066}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.000054597847, z: -0, w: 1}
-  m_LocalPosition: {x: 2.62, y: -0, z: -14.87}
+  m_LocalPosition: {x: 2.6200027, y: 0, z: -14.870001}
   m_LocalScale: {x: 2.75, y: 0.019882632, z: 3.9478724}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 870673638528186284}
+  m_Father: {fileID: 7027931919747192247}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &4594383731829105690
 MeshFilter:
@@ -4492,20 +4683,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6258097298787444131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6760967786824475066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
-  rug: {fileID: 6760967786824475066}
-  x: 3
 --- !u!1 &6776311683172129355
 GameObject:
   m_ObjectHideFlags: 0
@@ -4619,6 +4796,53 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &6971816589765557822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1578695176155382957}
+  - component: {fileID: 520012248246222294}
+  m_Layer: 0
+  m_Name: Rug Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1578695176155382957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6971816589765557822}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 99188143983965178}
+  m_Father: {fileID: 870673638528186284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &520012248246222294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6971816589765557822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
+  rug: {fileID: 6062661068504492290}
+  x: 3
 --- !u!1 &7090482028131459129
 GameObject:
   m_ObjectHideFlags: 0
@@ -6102,6 +6326,53 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &8951129331302927126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8994973726216869239}
+  - component: {fileID: 5461353429920693107}
+  m_Layer: 0
+  m_Name: Rug Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8994973726216869239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8951129331302927126}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7655199754823928279}
+  m_Father: {fileID: 870673638528186284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5461353429920693107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8951129331302927126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
+  rug: {fileID: 3958267472058889086}
+  x: 3
 --- !u!1 &8951903767392751983
 GameObject:
   m_ObjectHideFlags: 0
@@ -6225,9 +6496,8 @@ GameObject:
   - component: {fileID: 8581207060117455527}
   - component: {fileID: 7959980481963480572}
   - component: {fileID: 6142374579750390808}
-  - component: {fileID: 2669638380643582622}
   m_Layer: 0
-  m_Name: Rug Spot (1)
+  m_Name: Rug6
   m_TagString: Footsteps/Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6242,11 +6512,11 @@ Transform:
   m_GameObject: {fileID: 9022466720622841495}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7068127, z: -0, w: 0.70740086}
-  m_LocalPosition: {x: 0.86, y: -0, z: -4.11}
-  m_LocalScale: {x: 1.4112422, y: 0.013380216, z: 4.1511865}
+  m_LocalPosition: {x: 0.8600006, y: 0, z: -4.1100006}
+  m_LocalScale: {x: 1.4112422, y: 0.013380216, z: 4.151186}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 870673638528186284}
+  m_Father: {fileID: 6632882890383170460}
   m_LocalEulerAnglesHint: {x: 0, y: 0.041, z: 0}
 --- !u!33 &7959980481963480572
 MeshFilter:
@@ -6306,20 +6576,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2669638380643582622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9022466720622841495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6996360bad68bc84ab15c51473adc0d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RugPicker
-  rug: {fileID: 9022466720622841495}
-  x: 3
 --- !u!1001 &92635689054735206
 PrefabInstance:
   m_ObjectHideFlags: 0

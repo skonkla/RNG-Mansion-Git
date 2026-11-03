@@ -17,6 +17,9 @@ TagManager:
   - Footsteps/Wood
   - Footsteps/Carpet
   - Footsteps/Tile
+  - Easy
+  - Medium
+  - Hard
   layers:
   - Default
   - TransparentFX

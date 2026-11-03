@@ -549,6 +549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.483
@@ -572,7 +576,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 84596850}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!4 &84596848 stripped
 Transform:
@@ -584,6 +591,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 84596847}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &84596850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84596849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!4 &95204275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 22022447124478420, guid: 8f9a2d51e9d294848b8701fd4d5ef941, type: 3}
@@ -604,6 +625,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3430757986657647224, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 2110959666}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &118582611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118582609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1001 &129706858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -748,6 +783,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Easy Room 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6579208659371531535, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 7891412000408690868, guid: fc89572c3771c0845baae7c02a447079, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07
@@ -1023,43 +1070,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3652075136491410139, guid: fc89572c3771c0845baae7c02a447079, type: 3}
   m_PrefabInstance: {fileID: 129706858}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &245057625
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 245057626}
-  m_Layer: 5
-  m_Name: Food3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &245057626
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245057625}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 952016151}
-  - {fileID: 813862989}
-  m_Father: {fileID: 1483834884}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 737, y: -416}
-  m_SizeDelta: {x: 47.822998, y: 104.719604}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &255839125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1313,6 +1323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.345
@@ -1356,7 +1370,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1262793946}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!1 &273479690
 GameObject:
@@ -1387,7 +1404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7247389a4e7119e449f743d41d842717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
-  timerTime: 10
+  timerTime: 10000
   timerText: {fileID: 560916195}
   finalTimeText: {fileID: 651967119}
   bestTimeText: {fileID: 713532118}
@@ -2334,6 +2351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Room (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095181677961316016, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1768719455254651476, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.72
@@ -2378,6 +2399,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 5.42
       objectReference: {fileID: 0}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 5145128565821444928, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2663,6 +2692,40 @@ MonoBehaviour:
   - {fileID: 1101696352}
   - {fileID: 403323671}
   - {fileID: 1174347247}
+  foodRooms:
+  - {fileID: 8688403962046532126}
+  - {fileID: 1537482218}
+  - {fileID: 1546916701}
+  - {fileID: 235618727}
+  - {fileID: 1025800643}
+  - {fileID: 1454595854}
+  - {fileID: 1448302442}
+  - {fileID: 3151017531461944281}
+  - {fileID: 2147350426}
+  - {fileID: 1736711871}
+  - {fileID: 1842268305}
+  - {fileID: 1765479675}
+  - {fileID: 537337027}
+  - {fileID: 1310231298}
+  - {fileID: 355612771}
+  - {fileID: 914350419}
+  - {fileID: 516823039}
+  - {fileID: 1313912899}
+  - {fileID: 4888067373584492391}
+  - {fileID: 392350800}
+  - {fileID: 118582609}
+  - {fileID: 2041470627}
+  - {fileID: 1220167899}
+  - {fileID: 658898111}
+  - {fileID: 1482112299}
+  - {fileID: 1036685097}
+  - {fileID: 1262793944}
+  - {fileID: 409441235}
+  - {fileID: 1905465309}
+  - {fileID: 84596849}
+  - {fileID: 1019334373}
+  - {fileID: 686620799}
+  - {fileID: 875882778}
   startingRoom: {fileID: 1585366267848814809}
   numOfRooms: 0
   easyRoomsNeeded: 5
@@ -2912,6 +2975,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3430757986657647224, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 993998002}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &392350802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392350800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1 &396586761
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,10 +3313,6 @@ MonoBehaviour:
   finalRoomCountText: {fileID: 1225909256}
   staminaBar: {fileID: 903919044}
   fPSController: {fileID: 1569402400}
-  food1: {fileID: 1692759420}
-  food2: {fileID: 856811300}
-  food3: {fileID: 245057625}
-  food4: {fileID: 1084401773}
   foodicons:
   - {fileID: 1196595723}
   - {fileID: 2131465214}
@@ -3365,6 +3438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5192925226587531914, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6230491038318016855, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
       propertyPath: m_TagString
       value: StoveD
@@ -3412,16 +3489,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1454684099612856911, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7385138298726823898, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3166055845555489856, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
 --- !u!4 &403323670 stripped
 Transform:
@@ -3609,6 +3677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.345
@@ -3652,7 +3724,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 409441236}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!4 &409441234 stripped
 Transform:
@@ -3664,6 +3739,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 409441233}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &409441236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409441235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1 &412526698
 GameObject:
   m_ObjectHideFlags: 0
@@ -3963,6 +4052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Room (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095181677961316016, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1768719455254651476, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.772224
@@ -4075,6 +4168,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -5.08
       objectReference: {fileID: 0}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 5145128565821444928, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -4404,6 +4505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Room (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095181677961316016, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1242905735421345474, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.07
@@ -4472,6 +4577,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -5.82
       objectReference: {fileID: 0}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 5145128565821444928, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -5522,7 +5635,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 656986599}
-  - component: {fileID: 656986600}
   m_Layer: 0
   m_Name: Medium Rooms
   m_TagString: Untagged
@@ -5556,20 +5668,6 @@ Transform:
   - {fileID: 1313912900}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &656986600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656986598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b31c08a64c01474fb60ad1967ecfc78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MedRoomFoodSpawner
-  roomManager: {fileID: 360636377}
-  timerManager: {fileID: 273479691}
 --- !u!4 &658288424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5166491492043901348, guid: a881931ebb66cb347aaf3627f5853c2b, type: 3}
@@ -5787,6 +5885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.177
@@ -5798,7 +5900,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 658898112}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!4 &658898110 stripped
 Transform:
@@ -5810,6 +5915,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 658898109}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &658898112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658898111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1 &667596419
 GameObject:
   m_ObjectHideFlags: 0
@@ -6018,6 +6137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.271
@@ -6049,7 +6172,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 686620800}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!4 &686620798 stripped
 Transform:
@@ -6061,6 +6187,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 686620797}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &686620800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686620799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1 &693294231
 GameObject:
   m_ObjectHideFlags: 0
@@ -6499,7 +6639,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 718173569}
-  - component: {fileID: 718173570}
   m_Layer: 0
   m_Name: Easy Rooms
   m_TagString: Untagged
@@ -6529,20 +6668,6 @@ Transform:
   - {fileID: 1448302443}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &718173570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718173568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72cfac5295d90004f98a016c506a962f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EasyRoomFoodSpawner
-  roomManager: {fileID: 360636377}
-  timerManager: {fileID: 273479691}
 --- !u!1001 &719718383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7457,81 +7582,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &813862988
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 813862989}
-  - component: {fileID: 813862991}
-  - component: {fileID: 813862990}
-  m_Layer: 5
-  m_Name: FoodOut3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &813862989
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813862988}
-  m_LocalRotation: {x: -0, y: -0, z: 0.28566295, w: 0.9583302}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.47822988, y: 1.047196, z: 0.47822988}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 245057626}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.197}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -23.911621, y: 52.359802}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &813862990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813862988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c2978188e2ae4e4d9ae1a339f996c27, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &813862991
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813862988}
-  m_CullTransparentMesh: 1
 --- !u!1 &820469741 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8225101781829365977, guid: c2b44835b938e5941bc82818f5e468e4, type: 3}
@@ -7651,43 +7701,6 @@ MonoBehaviour:
   food4: {fileID: 756422515}
   food5: {fileID: 1625875759}
   x: 5
---- !u!1 &856811300
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 856811301}
-  m_Layer: 5
-  m_Name: Food2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &856811301
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856811300}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2131465215}
-  - {fileID: 1529833512}
-  m_Father: {fileID: 1483834884}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 796, y: -416}
-  m_SizeDelta: {x: 47.822998, y: 104.719604}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &871616163
 GameObject:
   m_ObjectHideFlags: 0
@@ -7985,6 +7998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.271
@@ -8016,7 +8033,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 875882780}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!1 &875882778 stripped
 GameObject:
@@ -8028,6 +8048,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3430757986657647224, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 875882777}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &875882780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875882778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1001 &887045532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8236,6 +8270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Room (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095181677961316016, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1768719455254651476, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.87
@@ -8340,6 +8378,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 5145128565821444928, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -9125,11 +9171,11 @@ RectTransform:
   m_LocalScale: {x: 0.47822988, y: 1.047196, z: 0.47822988}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 245057626}
+  m_Father: {fileID: 1483834884}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.197}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -23.911621, y: 52.359802}
+  m_AnchoredPosition: {x: 686.9999, y: -366}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952016152
@@ -9396,10 +9442,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 392350802}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!1 &1019334373 stripped
 GameObject:
@@ -9411,6 +9464,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3430757986657647224, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 1637271389}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1019334375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019334373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1001 &1025800642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9567,6 +9634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Easy Room 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6579208659371531535, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6749320642818170478, guid: fc89572c3771c0845baae7c02a447079, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.72
@@ -9595,6 +9666,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 7891412000408690868, guid: fc89572c3771c0845baae7c02a447079, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.57
@@ -9868,6 +9947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.309
@@ -9887,7 +9970,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1036685098}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!4 &1036685096 stripped
 Transform:
@@ -9899,6 +9985,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 1036685095}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1036685098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036685097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1001 &1046715630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9981,43 +10081,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1454684099612856911, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
   m_PrefabInstance: {fileID: 403323669}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1084401773
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1084401774}
-  m_Layer: 5
-  m_Name: Food4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1084401774
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084401773}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1851463946}
-  - {fileID: 1342904310}
-  m_Father: {fileID: 1483834884}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 678, y: -416}
-  m_SizeDelta: {x: 47.822998, y: 104.719604}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1093641265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10177,6 +10240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5192925226587531914, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6230491038318016855, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
       propertyPath: m_TagString
       value: StoveC
@@ -10224,16 +10291,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1454684099612856911, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7385138298726823898, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3166055845555489856, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
 --- !u!4 &1101696351 stripped
 Transform:
@@ -10386,6 +10444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.483
@@ -10409,7 +10471,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1905465311}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!1 &1164329347 stripped
 GameObject:
@@ -10522,6 +10587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5192925226587531914, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6230491038318016855, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
       propertyPath: m_TagString
       value: StoveE
@@ -10533,16 +10602,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1454684099612856911, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7385138298726823898, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3166055845555489856, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
 --- !u!1 &1174347247 stripped
 GameObject:
@@ -10589,11 +10649,11 @@ RectTransform:
   m_LocalScale: {x: 0.47822988, y: 1.047196, z: 0.47822988}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1692759421}
+  m_Father: {fileID: 1483834884}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.197}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -23.911621, y: 52.359802}
+  m_AnchoredPosition: {x: 804.9999, y: -366}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1196595725
@@ -10644,6 +10704,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3430757986657647224, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 1844363024}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1220167901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220167899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1 &1225909254
 GameObject:
   m_ObjectHideFlags: 0
@@ -10850,6 +10924,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3430757986657647224, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 266300882}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1262793946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262793944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1 &1296673546 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3166055845555489856, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
@@ -11093,6 +11181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Room (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095181677961316016, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1768719455254651476, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.79
@@ -11137,6 +11229,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 5145128565821444928, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -11348,6 +11448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Room (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095181677961316016, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1768719455254651476, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.925446
@@ -11460,6 +11564,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.81
       objectReference: {fileID: 0}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 5145128565821444928, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -11773,81 +11885,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5741829648019562308, guid: c5e95db62efb2194cacf5df2b07b2de2, type: 3}
   m_PrefabInstance: {fileID: 1321166688}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1342904309
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1342904310}
-  - component: {fileID: 1342904312}
-  - component: {fileID: 1342904311}
-  m_Layer: 5
-  m_Name: FoodOut4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1342904310
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342904309}
-  m_LocalRotation: {x: -0, y: -0, z: 0.28566295, w: 0.9583302}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.47822988, y: 1.047196, z: 0.47822988}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1084401774}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.197}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -23.911621, y: 52.359802}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1342904311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342904309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c2978188e2ae4e4d9ae1a339f996c27, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1342904312
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342904309}
-  m_CullTransparentMesh: 1
 --- !u!1 &1349573326
 GameObject:
   m_ObjectHideFlags: 0
@@ -12513,6 +12550,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Easy Room 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6579208659371531535, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6910707928915378171, guid: fc89572c3771c0845baae7c02a447079, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.34
@@ -12541,6 +12582,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 7891412000408690868, guid: fc89572c3771c0845baae7c02a447079, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.19
@@ -12914,6 +12963,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3430757986657647224, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 1725771824}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1482112301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482112299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1 &1483834883
 GameObject:
   m_ObjectHideFlags: 0
@@ -12942,10 +13005,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1692759421}
-  - {fileID: 856811301}
-  - {fileID: 245057626}
-  - {fileID: 1084401774}
+  - {fileID: 1196595724}
+  - {fileID: 2131465215}
+  - {fileID: 952016151}
+  - {fileID: 1851463946}
   m_Father: {fileID: 1530666616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
@@ -13314,81 +13377,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528396817}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1529833511
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1529833512}
-  - component: {fileID: 1529833514}
-  - component: {fileID: 1529833513}
-  m_Layer: 5
-  m_Name: FoodOut2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1529833512
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529833511}
-  m_LocalRotation: {x: -0, y: -0, z: 0.28566295, w: 0.9583302}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.47822988, y: 1.047196, z: 0.47822988}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 856811301}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.197}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -23.911621, y: 52.359802}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1529833513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529833511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c2978188e2ae4e4d9ae1a339f996c27, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1529833514
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529833511}
-  m_CullTransparentMesh: 1
 --- !u!1 &1530666615
 GameObject:
   m_ObjectHideFlags: 0
@@ -13819,6 +13807,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Easy Room 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6579208659371531535, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 7891412000408690868, guid: fc89572c3771c0845baae7c02a447079, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.21
@@ -13924,6 +13924,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5192925226587531914, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6230491038318016855, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
       propertyPath: m_TagString
       value: StoveB
@@ -13931,16 +13935,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1454684099612856911, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7385138298726823898, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3166055845555489856, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
 --- !u!4 &1537519387 stripped
 Transform:
@@ -14088,6 +14083,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Easy Room 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6579208659371531535, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 7891412000408690868, guid: fc89572c3771c0845baae7c02a447079, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.7
@@ -15385,6 +15392,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.271
@@ -15416,7 +15427,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1019334375}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!1 &1639576446
 GameObject:
@@ -15427,7 +15441,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1639576447}
-  - component: {fileID: 1639576448}
   m_Layer: 0
   m_Name: Hard Rooms
   m_TagString: Untagged
@@ -15465,20 +15478,6 @@ Transform:
   - {fileID: 875882779}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1639576448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639576446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
-  roomManager: {fileID: 360636377}
-  timerManager: {fileID: 273479691}
 --- !u!1 &1647768424
 GameObject:
   m_ObjectHideFlags: 0
@@ -15656,43 +15655,6 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1692759420
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1692759421}
-  m_Layer: 5
-  m_Name: Food1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1692759421
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692759420}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1196595724}
-  - {fileID: 1729935520}
-  m_Father: {fileID: 1483834884}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 855, y: -416}
-  m_SizeDelta: {x: 47.822998, y: 104.719604}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1721139600
 GameObject:
@@ -16120,6 +16082,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.309
@@ -16139,83 +16105,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1482112301}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
---- !u!1 &1729935519
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1729935520}
-  - component: {fileID: 1729935522}
-  - component: {fileID: 1729935521}
-  m_Layer: 5
-  m_Name: FoodOut1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1729935520
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729935519}
-  m_LocalRotation: {x: -0, y: -0, z: 0.28566295, w: 0.9583302}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.47822988, y: 1.047196, z: 0.47822988}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1692759421}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.197}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -23.911621, y: 52.359802}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1729935521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729935519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c2978188e2ae4e4d9ae1a339f996c27, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1729935522
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729935519}
-  m_CullTransparentMesh: 1
 --- !u!1001 &1736711869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16227,6 +16121,10 @@ PrefabInstance:
     - target: {fileID: 1095181677961316016, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_Name
       value: Medium Room (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095181677961316016, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1768719455254651476, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16312,6 +16210,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 5145128565821444928, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -16511,6 +16417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Room (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095181677961316016, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1242905735421345474, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.07
@@ -16575,6 +16485,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.014
       objectReference: {fileID: 0}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 5145128565821444928, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -17151,6 +17069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Room (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095181677961316016, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1768719455254651476, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_LocalPosition.z
       value: -2.6800003
@@ -17231,6 +17153,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 5145128565821444928, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -17618,6 +17548,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.177
@@ -17629,7 +17563,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1220167901}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!1 &1851463945
 GameObject:
@@ -17661,11 +17598,11 @@ RectTransform:
   m_LocalScale: {x: 0.47822988, y: 1.047196, z: 0.47822988}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1084401774}
+  m_Father: {fileID: 1483834884}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.197}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -23.911621, y: 52.359802}
+  m_AnchoredPosition: {x: 627.9999, y: -366}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1851463947
@@ -18087,6 +18024,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3430757986657647224, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 1140966421}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1905465311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905465309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1001 &1920318435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18331,6 +18282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.856
@@ -18366,7 +18321,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2041470628}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!4 &2041470626 stripped
 Transform:
@@ -18378,6 +18336,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 2041470625}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2041470628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041470627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!1 &2042510031
 GameObject:
   m_ObjectHideFlags: 0
@@ -18827,6 +18799,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Easy Room 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6579208659371531535, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6749320642818170478, guid: fc89572c3771c0845baae7c02a447079, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.72
@@ -18855,6 +18831,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 7891412000408690868, guid: fc89572c3771c0845baae7c02a447079, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.45
@@ -19072,6 +19056,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402524909782696870, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.856
@@ -19107,7 +19095,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 118582611}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!1 &2131465214
 GameObject:
@@ -19139,11 +19130,11 @@ RectTransform:
   m_LocalScale: {x: 0.47822988, y: 1.047196, z: 0.47822988}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 856811301}
+  m_Father: {fileID: 1483834884}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.197}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -23.911621, y: 52.359802}
+  m_AnchoredPosition: {x: 745.9999, y: -366}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2131465216
@@ -19196,6 +19187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Room (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1095181677961316016, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1768719455254651476, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.62
@@ -19224,6 +19219,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -3.72
       objectReference: {fileID: 0}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 5145128565821444928, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -19794,10 +19797,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hard Room
       objectReference: {fileID: 0}
+    - target: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4888067373584492392}
   m_SourcePrefab: {fileID: 100100000, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
 --- !u!1 &3151017531461944281 stripped
 GameObject:
@@ -19953,6 +19963,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4943764173072624400, guid: 349e8f9fecfbc62449cf9f0534737bf1, type: 3}
   m_PrefabInstance: {fileID: 2742289124815625696}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4888067373584492392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4888067373584492391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9e1a666c0af749b2bcbcdfdc52e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HardRoomFoodSpawner
+  roomManager: {fileID: 360636377}
+  timerManager: {fileID: 273479691}
 --- !u!65 &7474240859252631005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20018,6 +20042,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Room
       objectReference: {fileID: 0}
+    - target: {fileID: 1095181677961316016, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1768719455254651476, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.1
@@ -20038,6 +20066,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -0.609
       objectReference: {fileID: 0}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 4526641631795165881, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 6903017000834036587, guid: 3c971f8c9b149a241b7e62c089da53c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.96
@@ -20225,6 +20261,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Easy Room
       objectReference: {fileID: 0}
+    - target: {fileID: 6579208659371531535, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 360636377}
+    - target: {fileID: 6970514965922305334, guid: fc89572c3771c0845baae7c02a447079, type: 3}
+      propertyPath: timerManager
+      value: 
+      objectReference: {fileID: 273479691}
     - target: {fileID: 8228201069694943063, guid: fc89572c3771c0845baae7c02a447079, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.06
@@ -20302,19 +20350,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint
       objectReference: {fileID: 0}
+    - target: {fileID: 5192925226587531914, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1454684099612856911, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7385138298726823898, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3166055845555489856, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f73bc9a2de2f46245b00495823b69610, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
