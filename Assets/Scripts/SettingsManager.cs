@@ -12,6 +12,7 @@ public class SettingsManager : MonoBehaviour
     public TMP_Dropdown resolutionDropdown;
     public GameObject pauseMenu;
     public FPSController fPSController;
+    public Slider audioSlider;
     public UI uI;
 
     Resolution[] resolutions;
@@ -41,6 +42,11 @@ public class SettingsManager : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+
+        if(PlayerPrefs.GetFloat("volume") != 0)
+        {
+            audioSlider.value = PlayerPrefs.GetFloat("volume");
+        }
     }
 
     void Update()
@@ -72,11 +78,13 @@ public class SettingsManager : MonoBehaviour
     public void SetVolume (float volume)
     {
         audioMixer.SetFloat("volume", volume);
+        PlayerPrefs.SetFloat("volume", volume);
     }
 
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        //if fullscreen is weird we might have to playerprefs.setint (bool not supported)
     }
 
     public void ResumeButton()
@@ -102,7 +110,7 @@ public class SettingsManager : MonoBehaviour
 
     public void ClearScore()
     {
-        PlayerPrefs.SetFloat("Best Time", 0.0f);
+        PlayerPrefs.SetInt("Best", 0);
     }
 
 }

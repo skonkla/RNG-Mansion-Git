@@ -8,6 +8,9 @@ public class UI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI healthText = default;
     public TextMeshProUGUI gameOverTimerText;
     public TextMeshProUGUI finalRoomCountText;
+    public TextMeshProUGUI bestRoomCountText;
+    public GameObject newBestText;
+
     [Header("HUD")]
     public Image staminaBar;
     public FPSController fPSController;
@@ -19,6 +22,7 @@ public class UI : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject hud;
     public bool gameOver = false;
+    public bool recordBeat = false;
 
 
     private void OnEnable()
@@ -40,6 +44,7 @@ public class UI : MonoBehaviour
     private void Start()
     {
         gameOverScreen.SetActive(false);
+        newBestText.SetActive(false);
 
         UpdateHealth(100);
         UpdateStamina(100);
@@ -70,10 +75,26 @@ public class UI : MonoBehaviour
         gameOverScreen.SetActive(true);
         hud.SetActive(false);
 
+        if(roomManager.numOfRooms > PlayerPrefs.GetInt("Best"))
+        {
+            PlayerPrefs.SetInt("Best", roomManager.numOfRooms);
+            recordBeat = true;
+        }
+
         gameOverTimerText.text = "You survived for " + roomManager.timeToBeat.ToString("00:00.000");
 
         finalRoomCountText.text = "You made it to room #" + roomManager.numOfRooms;
-        
+
+        if(roomManager.numOfRooms <= PlayerPrefs.GetInt("Best"))
+        {
+            bestRoomCountText.text = "Your Best Run: Room #" + PlayerPrefs.GetInt("Best");
+        }
+
+        if (recordBeat)
+        {
+            newBestText.SetActive(true);
+            bestRoomCountText.text = "";
+        }
             
     }
 

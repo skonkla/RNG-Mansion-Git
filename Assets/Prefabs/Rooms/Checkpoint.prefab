@@ -72,7 +72,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.77, y: 5.42}
+  m_AnchoredPosition: {x: -0.53, y: 5.42}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0, y: 0}
 --- !u!23 &5092410531650700757
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Heal or Upgrade
+  m_text: Choose An Upgrade
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 262dc9eed6bf22b42b779f196569d8fd, type: 2}
   m_sharedMaterial: {fileID: -1137682122674887824, guid: 262dc9eed6bf22b42b779f196569d8fd, type: 2}
@@ -582,7 +582,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ee4e371fb99159945a171fd2ce761b93, type: 2}
+  - {fileID: 2100000, guid: 6fc191533c3c4cb4593f4165097fe817, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -661,7 +661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.766, y: 3.0202694}
+  m_AnchoredPosition: {x: 0.766, y: 3.02}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0, y: 0}
 --- !u!23 &4133996534374186198
@@ -733,9 +733,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[E] Cook Upgrade:
+  m_text: 'Upgrade:
 
-    Bonus time'
+    Bonus Time'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 262dc9eed6bf22b42b779f196569d8fd, type: 2}
   m_sharedMaterial: {fileID: -1137682122674887824, guid: 262dc9eed6bf22b42b779f196569d8fd, type: 2}
@@ -1324,7 +1324,6 @@ Transform:
   - {fileID: 243898026564575565}
   - {fileID: 381382011740894706}
   - {fileID: 1843093168687282823}
-  - {fileID: 5047897113080060195}
   - {fileID: 2490183208220294415}
   - {fileID: 3351933157185934590}
   - {fileID: 9080253210649488913}
@@ -1532,6 +1531,7 @@ Transform:
   - {fileID: 2442219543056335225}
   - {fileID: 2201499018927791733}
   - {fileID: 6841118388663135338}
+  - {fileID: 5047897113080060195}
   - {fileID: 6718515473660732397}
   - {fileID: 429858461728782607}
   - {fileID: 8559133448055666210}
@@ -1992,7 +1992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.31, y: 2.781}
+  m_AnchoredPosition: {x: 0.31, y: 3.02}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0, y: 0}
 --- !u!23 &8540944986322170203
@@ -2064,7 +2064,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[E] Heal'
+  m_text: 'Upgrade:
+
+    Max Stamina'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 262dc9eed6bf22b42b779f196569d8fd, type: 2}
   m_sharedMaterial: {fileID: -1137682122674887824, guid: 262dc9eed6bf22b42b779f196569d8fd, type: 2}
@@ -3439,7 +3441,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8318159546237734167}
+    m_TransformParent: {fileID: 3996019091276408131}
     m_Modifications:
     - target: {fileID: 1236069308234179557, guid: a7dc3585d9ab9c848824b3ca313e193e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3503,7 +3505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7694887817393811490, guid: a7dc3585d9ab9c848824b3ca313e193e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -43.483
+      value: -43.48301
       objectReference: {fileID: 0}
     - target: {fileID: 7694887817393811490, guid: a7dc3585d9ab9c848824b3ca313e193e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3511,7 +3513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7694887817393811490, guid: a7dc3585d9ab9c848824b3ca313e193e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.571
+      value: -13.571003
       objectReference: {fileID: 0}
     - target: {fileID: 7694887817393811490, guid: a7dc3585d9ab9c848824b3ca313e193e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3554,9 +3556,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7026296152837155480, guid: a7dc3585d9ab9c848824b3ca313e193e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8106212858618836855}
-    - targetCorrespondingSourceObject: {fileID: 7026296152837155480, guid: a7dc3585d9ab9c848824b3ca313e193e, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 8985555341870332311}
   m_SourcePrefab: {fileID: 100100000, guid: a7dc3585d9ab9c848824b3ca313e193e, type: 3}
 --- !u!4 &5047897113080060195 stripped
@@ -3569,27 +3568,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7026296152837155480, guid: a7dc3585d9ab9c848824b3ca313e193e, type: 3}
   m_PrefabInstance: {fileID: 3225703364937804033}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &8106212858618836855
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5568255643299283865}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 1.640749, y: 1.6811827, z: 1.6219448}
-  m_Center: {x: 0.043032743, y: 1.001178, z: -0.021488689}
 --- !u!65 &8985555341870332311
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4204,10 +4182,6 @@ PrefabInstance:
       value: Stove
       objectReference: {fileID: 0}
     - target: {fileID: 7668101113659558224, guid: 84c20764a493e734aad48e8b8b6c8984, type: 3}
-      propertyPath: m_TagString
-      value: StoveA
-      objectReference: {fileID: 0}
-    - target: {fileID: 7668101113659558224, guid: 84c20764a493e734aad48e8b8b6c8984, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4215,7 +4189,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1465411800608363075, guid: 84c20764a493e734aad48e8b8b6c8984, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6998947835756729322, guid: 84c20764a493e734aad48e8b8b6c8984, type: 3}

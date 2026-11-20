@@ -66,6 +66,9 @@ public class FPSController : MonoBehaviour
     [SerializeField] private AudioClip[] woodClips = default;
     [SerializeField] private AudioClip[] carpetClips = default;
     [SerializeField] private AudioClip[] tileClips = default;
+
+    [Header("Other Sounds")]
+    [SerializeField] private AudioClip doorOpen;
     private float footstepTimer = 0;
     private float GetCurrentOffset => IsSprinting ? baseStepSpeed * sprintStepMultiplier : baseStepSpeed;
 
@@ -149,6 +152,7 @@ public class FPSController : MonoBehaviour
             //print("Time to beat that room: " + roomManager.timeToBeat);
             //roomManager.timeToBeat = 0f;
             roomManager.NewRoom();
+            footStepAudioSource.PlayOneShot(doorOpen);
             
         }
 
@@ -160,14 +164,15 @@ public class FPSController : MonoBehaviour
 
             uI.foodicons[roomManager.foodNeeded].SetActive(false);
 
-            if (upgradeManager.upFoodStamina)
+            if (upgradeManager.upFoodStamina > 0)
             {
-                currentStamina += 25;
+                currentStamina += 10 + (upgradeManager.upFoodStamina * 4);
+                OnStaminaChange?.Invoke(currentStamina);
             }
 
-            if (upgradeManager.upFoodHeal)
+            if (upgradeManager.upFoodHeal > 0)
             {
-                OnTakeDamage(-5);
+                OnTakeDamage(-5 - (upgradeManager.upFoodHeal * 5));
             }
         }
     }
@@ -212,9 +217,9 @@ public class FPSController : MonoBehaviour
 
     private void HandleStamina()
     {
-        if (upgradeManager.upMaxStamina)
+        if (upgradeManager.upMaxStamina > 0)
         {
-           maxStamina = 125; 
+           maxStamina = 105 + (upgradeManager.upMaxStamina * 8); 
         }
 
         if(IsSprinting && currentInput != Vector2.zero)
@@ -255,16 +260,16 @@ public class FPSController : MonoBehaviour
                 switch (hit.collider.tag)
                 {
                     case "Footsteps/Wood":
-                    footStepAudioSource.PlayOneShot(woodClips[Random.Range(0, woodClips.Length - 1)]);
+                    footStepAudioSource.PlayOneShot(woodClips[roomManager.GetUniqueRandom(woodClips.Length)]);
                         break;
                     case "Footsteps/Tile":
-                    footStepAudioSource.PlayOneShot(tileClips[Random.Range(0, tileClips.Length - 1)]);
+                    footStepAudioSource.PlayOneShot(tileClips[roomManager.GetUniqueRandom(tileClips.Length)]);
                         break;
                     case "Footsteps/Carpet":
-                    footStepAudioSource.PlayOneShot(carpetClips[Random.Range(0, carpetClips.Length - 1)]);
+                    footStepAudioSource.PlayOneShot(carpetClips[roomManager.GetUniqueRandom(carpetClips.Length)]);
                         break;
                     default:
-                        footStepAudioSource.PlayOneShot(woodClips[Random.Range(0, woodClips.Length - 1)]);
+                        footStepAudioSource.PlayOneShot(woodClips[roomManager.GetUniqueRandom(woodClips.Length)]);
                         break;
                 
                 }
@@ -307,23 +312,27 @@ public class FPSController : MonoBehaviour
     {
         if(currentStamina == 0)
         {
-            if (upgradeManager.upStaminaRecharge)
+            if (upgradeManager.upStaminaRecharge > 0)
             {
-                yield return new WaitForSeconds(timeBeforeStaminaRegen / 1.5f);
+                print("You ran out of stamina so we're waiting for " + timeBeforeStaminaRegen / 1.2f + (upgradeManager.upStaminaRecharge * 0.5f));
+                yield return new WaitForSeconds(timeBeforeStaminaRegen / 1.2f + (upgradeManager.upStaminaRecharge * 0.5f));
             }
             else
             {
+                print("You ran out of stamina so we're waiting for " + timeBeforeStaminaRegen);
                 yield return new WaitForSeconds(timeBeforeStaminaRegen);   
             }
              
         }
 
-        if (upgradeManager.upStaminaRecharge)
+        if (upgradeManager.upStaminaRecharge > 0)
         {
-           yield return new WaitForSeconds(timeBeforeStaminaRegen / 3.0f); 
+            print("Waiting for " + timeBeforeStaminaRegen / (2.5f * upgradeManager.upStaminaRecharge));
+            yield return new WaitForSeconds(timeBeforeStaminaRegen / (2.5f * upgradeManager.upStaminaRecharge)); 
         }
         else
         {
+            print("Waiting for " + timeBeforeStaminaRegen / 2.0f);
             yield return new WaitForSeconds(timeBeforeStaminaRegen / 2.0f);
         }
         
